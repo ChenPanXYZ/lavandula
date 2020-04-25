@@ -1,0 +1,159 @@
+/*For big screen*/
+@media (min-width: 785px) {
+	/*For some common components*/
+  	p {
+		word-wrap: break-word;
+  	}
+	
+	a:link, a:visited, a:active {
+		text-decoration: none;
+		color: #212121;
+	}
+	
+	a:hover {
+		text-decoration: none;
+		color: hsl(0, 0%, 13%);
+	}
+
+	#header {
+		height: 335px;
+	}
+	
+	.popup-reminder a {
+	    color: #dcb879;
+	    text-decoration: none;
+	}
+
+	.displayOnMobile {
+		display: none;
+	}
+	
+	.topnav a:nth-child(2) {
+		margin-left: 50px;
+	}
+	
+	/*Header*/
+
+
+	.topnav .icon {
+		display: none;
+	}
+	
+	.topnav.responsive .icon {
+		display: none;
+	}
+	
+	.topnav a.icon {
+		display: none;
+	}
+	
+	.topnav.responsive a {
+		display: none;
+	}
+	
+	.topnav a {
+		display: block;
+	}
+	
+  	.site-header a{
+      	color: #FFFFFF;
+  	}
+	
+	#name {
+		display:block;
+		margin-top: 20px;
+		text-align: center;
+		font-size:35px;
+	}
+	
+	#contact {
+		display:block;
+		margin-bottom: 50px;
+		margin-top: -25px;
+	}
+	
+	#contact a {
+		position: relative;
+		padding-right: 20px;
+		padding-left: 20px;
+		font-size: 20px;
+	}
+	
+	
+	/*(Main) Content*/
+	.content{
+		font-size: 3vw;
+	}
+	
+	.main-section {
+		font-size: 25px;
+	}
+	
+	/*Introduction*/
+	#introduction {
+		font-size: 3vw;
+	}
+	
+	#iampan {
+		text-align: left;
+		line-height: 66px;
+		font-size: 36px;
+	}
+	
+	
+	/*My Story*/
+	#myStory p{
+		margin: 10px;
+	}
+	
+	/*Footer*/
+	#footer {
+	    display: block;
+	    padding-top: 60px;
+		font-size: 20px;
+		clear:both;
+	}
+	
+	
+	/*Cookie consent*/
+	#cookie_consent {
+		padding: 10px;
+	}
+	
+	#world-map-markers {
+		height: 450px;
+	}
+
+	.seen_cookie {
+		display: inline-block;
+		width: auto;
+		height: auto;
+		margin-right: 20px;
+		background-color: #dcb879;
+	}
+	
+	.guestbook-form{
+		max-width: 50%;
+	}
+
+
+	#visitorNumber {
+		font-size: 14px;
+	}
+	#footer-logo {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+	}
+	#idc-logo {
+		width: 16px;
+		height: 16px;
+		border-radius: auto;
+	}
+	#cloudflare-logo {
+		width: auto;
+		height: 16px;
+		border-radius: auto;
+	}
+	
+}
