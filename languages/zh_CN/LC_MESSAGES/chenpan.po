@@ -267,7 +267,7 @@ msgstr "Vultr提供云计算服务"
 
 msgid ""
 "Web Hosting by Hetzner"
-msgstr "Vultr提供云计算服务"
+msgstr "Hetzner提供云计算服务"
 
 msgid ""
 "CDN by Cloudflare"
