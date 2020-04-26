@@ -27,7 +27,7 @@ function loadFonts(){
 		<?php
 	}
 	if(getenv("LANG")== "en") {
-		print_r('<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">');
+		print_r('<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">');
 		?>
 		<style>
 			@font-face {
@@ -46,7 +46,7 @@ function loadFonts(){
 				font-family: 'Pan Sans', serif;
 			}
 			h1, h2, h3, h4 {
-				font-family: 'Open Sans', serif;
+				font-family: 'Roboto', serif;
 			}
 		</style>
 		<?php

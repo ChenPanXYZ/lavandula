@@ -333,7 +333,7 @@ ul {
 	display: inline-block;
 	padding: 15px;
 	margin-bottom: 15px;
-	font-family: 'Open Sans', Georgia, -apple-system, 'Nimbus Roman No9 L', Arial, sans-serif;
+	font-family: 'Roboto', Georgia, -apple-system, 'Nimbus Roman No9 L', Arial, sans-serif;
 }
 
 .guest-comment-content {
@@ -384,7 +384,7 @@ ul {
 }
 
 #footer {
-	font-family: 'Open Sans', Georgia, -apple-system, 'Nimbus Roman No9 L', Arial, sans-serif;
+	font-family: 'Roboto', Georgia, -apple-system, 'Nimbus Roman No9 L', Arial, sans-serif;
 }
 
 /*Popup Reminder*/
@@ -527,7 +527,7 @@ ul {
 	cursor: pointer;
 	width: 60%;
 	/* height: 50px; */
-	font-family: 'Open Sans', Georgia, -apple-system, 'Nimbus Roman No9 L', Arial, sans-serif;
+	font-family: 'Roboto', Georgia, -apple-system, 'Nimbus Roman No9 L', Arial, sans-serif;
 	height: 22px;
 }
 
