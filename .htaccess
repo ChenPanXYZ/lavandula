@@ -34,6 +34,6 @@ Redirect permanent /blog https://blog.chenpan.xyz/
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-Modpagespeed off
+Modpagespeed on
 
 Redirect 301 /csc309/ https://courses.chenpan.xyz/csc309/chenpan/

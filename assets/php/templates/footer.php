@@ -22,7 +22,7 @@
 
 
 <link rel="stylesheet" href="/assets/css/style.css" defer>
-<link rel="stylesheet" href="/assets/css/responsive.css" defer>
+<link rel="stylesheet" media="screen and (min-width: 785px)" href="/assets/css/responsive.css" defer>
 <script type="text/javascript" src="/assets/js/functions.js" async></script>
 <script type="text/javascript" src="/assets/js/home.js" async></script>
 <script type="text/javascript" src="/assets/js/modal.js" async></script>
