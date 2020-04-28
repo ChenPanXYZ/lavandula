@@ -13,6 +13,10 @@ let stateCheck = setInterval(() => {
     for(let i = 0; i < projectsNumOnOnePage; i++) {
         projects[i].style.display = "block"
     }
+    
+    for(let k = 1; k * projectsNumOnOnePage <= projects.length; k++) {
+      projects[k * projectsNumOnOnePage - 1].style.borderBottom = "none"
+    }
 
     const a_nodes_list = document.getElementById("projects").getElementsByTagName("a")
 		while(a_nodes_list.length != 0) {
@@ -49,13 +53,12 @@ let stateCheck = setInterval(() => {
       projectsPage -= 1
     }
     for(let i = 0; i < projects.length; i++) {
-      if(i>=(projectsPage * 8 - 8) && i < (projectsPage * 8)) {
+      if(i>=(projectsPage * projectsNumOnOnePage - projectsNumOnOnePage) && i < (projectsPage * projectsNumOnOnePage)) {
         projects[i].style.display = "block"
       }
       else {
         projects[i].style.display = "none"
       }
-
     }
   })
 
