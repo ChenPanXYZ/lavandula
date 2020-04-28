@@ -14,9 +14,10 @@ let stateCheck = setInterval(() => {
         projects[i].style.display = "block"
     }
 
-		const a_nodes_list = document.getElementById("projects").getElementsByTagName("a");
+    const a_nodes_list = document.getElementById("projects").getElementsByTagName("a")
 		for(let i = 0; i < a_nodes_list.length; i++) {
-			a_nodes_list[0].parentElement.innerHTML = a_nodes_list[0].innerHTML;
+      a_nodes_list[0].parentNode.innerHTML = a_nodes_list[0].innerHTML
+      // Notice that the length of a_nodes_list decrements.
 		}
 
 
