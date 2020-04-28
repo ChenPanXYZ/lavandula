@@ -15,7 +15,8 @@ let stateCheck = setInterval(() => {
     }
 
     const a_nodes_list = document.getElementById("projects").getElementsByTagName("a")
-		for(let i = 0; i < a_nodes_list.length; i++) {
+		while(a_nodes_list.length != 0) {
+      console.log(a_nodes_list[0].innerHTML)
       a_nodes_list[0].parentNode.innerHTML = a_nodes_list[0].innerHTML
       // Notice that the length of a_nodes_list decrements.
 		}
