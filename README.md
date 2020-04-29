@@ -24,7 +24,7 @@ Pan Chen's Personal Website 2020 version
 4. PHP 7.4.3
 
 ## Data Location
-🇩🇪 Nuremberg, Bavaria, Federal Republic of Germany
+Nuremberg, Bavaria, Federal Republic of Germany
 
 ## Colors
 1. SEIHEKI(青碧)：#268785
@@ -37,4 +37,4 @@ Pan Chen's Personal Website 2020 version
 8. GOFUN(胡粉)：#fffffb
 
 ## Language Support
-🇨🇦 English 🇹🇼 正體中文 🇨🇳 简体中文
+English 简体中文 繁體中文

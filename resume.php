@@ -35,8 +35,8 @@ include('assets/php/init.php');
 	<div class="languages modal-content" id = "modal-content">
 		<span class="close">&times;</span>
 		<a class = "language-switcher" href = "<?php echo $languageUrls[0]; ?>" onclick="setLanguage('en', mydomain)" aria-label="English Version" rel="noopener">English</a>
-		<a class = "language-switcher" href = "<?php echo $languageUrls[2]; ?>" onclick="setLanguage('zh-TW', mydomain)" aria-label="Traditional Chinese Version" rel="noopener">正體中文</a>
 		<a class = "language-switcher" href = "<?php echo $languageUrls[1]; ?>" onclick="setLanguage('zh-CN', mydomain)" aria-label="Simplified Chinese Version" rel="noopener">简体中文</a>
+		<a class = "language-switcher" href = "<?php echo $languageUrls[2]; ?>" onclick="setLanguage('zh-TW', mydomain)" aria-label="Traditional Chinese Version" rel="noopener">繁體中文</a>
 	</div>
 
 </div>
