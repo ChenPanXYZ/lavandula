@@ -5,7 +5,7 @@
 
 	<div id = "acknowledgements">
 		
-		<div id = 'idc'><a href = 'https://www.hetzner.com' target='_blank' aria-label='Hetzner' rel='noopener'><img id = 'idc-logo' src='/assets/uploads/hetzner.png' alt = 'Hetzner Logo'/>&nbsp;<?php echo _("Web Hosting by Hetzner"); ?></a></div>
+		<div id = 'idc'><a href = 'https://www.vultr.com' target='_blank' aria-label='Vultr' rel='noopener'><img id = 'idc-logo' src='/assets/uploads/vultr.png' alt = 'Vultr Logo'/>&nbsp;<?php echo _("Web Hosting by Vultr"); ?></a></div>
 		&vert;
 		<div id = 'cloudflare'><a href = 'https://www.cloudflare.com' target='_blank' aria-label='Cloudflare' rel='noopener'><img id = 'cloudflare-logo' src='/assets/uploads/cloudflare.png' alt = 'Cloudflare Logo'/>&nbsp;<?php echo _("CDN by Cloudflare"); ?></a></div>
 	</div>

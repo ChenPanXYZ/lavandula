@@ -2,7 +2,7 @@
 <?php
 include('assets/php/functions.php');
 include('assets/php/language-switcher.php');
-include('assets/php/ajax/ga.php');
+//include('config.php');
 ?>
 <html lang=<?php echo $language; ?>>
 <?php
