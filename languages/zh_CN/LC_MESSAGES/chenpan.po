@@ -170,10 +170,10 @@ msgstr ""
     "\t\t\t\t能够在互联网的角落里遇见你，真好！<br>\n"
     "\t\t\t\t- 陈攀"
 
-#项目集
+#项目
 
     msgid "My Projects"
-    msgstr "项目集"
+    msgstr "项目"
 
 #简传
 
@@ -519,10 +519,13 @@ msgstr "工具"
 msgid "Database"
 msgstr "数据库"
 
+msgid "Operating System"
+msgstr "操作系统"
+
 
 #项目章节的翻译
 msgid "Projects"
-msgstr "项目集"
+msgstr "项目"
     msgid "Your Today"
     msgstr "Your Today"
         msgid "Your Today is a Web Application that is built with Express for the backend, ReactJS for the frontend, and MongoDB for the databse. Many frameworks / libraries / External API have been used, such as Material-UI, Socket.IO, OpenWeatherMap and so on."
@@ -541,10 +544,10 @@ msgstr "项目集"
     msgid "<a href = \"https://3030.link\">3030.link - URL Shortener</a>"
     msgstr "<a href = \"https://3030.link\">3030.link - 网址缩略服务</a>"
 
-        msgid "3030.link is a URL shotener that was build with MongoDB, Express.js, and Node.js."
+        msgid "3030.link is a URL shortener that was build with MongoDB, Express.js, and Node.js."
         msgstr "3030.link是一个使用MongoDB、Express.js以及Node.js开发的网址缩略服务。"
 
-        msgid "Every use has ten quotes which they could pay to get their customized short url for any url."
+        msgid "Every user has ten quotes which they could pay to get their customized short url for any url."
         msgstr "每个用户有10个配额来为任意网址生成短链接。"
 
 
@@ -580,6 +583,26 @@ msgstr "项目集"
         "score."
         msgstr ""
         "这个网站也拥有内容管理系统的特性，并且在Lighthouse的性能评测中取得了100分。"
+
+
+    msgid "<a href = \"/github/Pizza-Parlour\">Pizza Parlour APIs</a>"
+    msgstr "<a href = \"/github/Pizza-Parlour\">披萨店API。</a>"
+
+        msgid "I created the Web APIs with Python and Flask."
+        msgstr "我使用了Python和Flask来制作这款网络应用API。"
+
+        msgid "Both integration and unit tests are applied, making sure that the features: order pizza, order drink, change order, check menu, set delivery, and so on, were implemented correctly."
+        msgstr "集成测试和单元测试都进行过，以确保诸如订披萨，订饮料，修改订单，查看菜单，设置配送方式等功能都被正确实现。"
+
+
+    msgid "<a href = \"/github/LuxuryRentals-Database\">Luxury Rentals Database</a>"
+    msgstr "<a href = \"/github/LuxuryRentals-Database\">豪华旅馆数据库</a>"
+
+        msgid "I designed the Database Schema for a fictitious company “Luxury Rental” in a database course."
+        msgstr "在一节数据库课程中，我为一家名为“豪华旅馆”的虚拟公司设计数据库架构。"
+
+        msgid "The database they used was the relational PostgreSQL."
+        msgstr "他们使用关系数据库PostgreSQL。"
 
 
     msgid "<a href = \"https://blog.panchen.xyz/cp\">CP - WordPress</a>"

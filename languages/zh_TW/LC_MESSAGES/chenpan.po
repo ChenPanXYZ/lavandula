@@ -172,7 +172,7 @@ msgstr ""
 #项目集
 
     msgid "My Projects"
-    msgstr "項目集"
+    msgstr "專案"
 
 #简传
 
@@ -502,10 +502,13 @@ msgstr "技能"
     msgid "Database"
     msgstr "資料庫"
 
+    msgid "Operating System"
+    msgstr "作業系統"
+
 
 #项目章节的翻译
 msgid "Projects"
-msgstr "項目集"
+msgstr "專案"
 
     msgid "Your Today"
     msgstr "Your Today"
@@ -525,10 +528,10 @@ msgstr "項目集"
     msgid "<a href = \"https://3030.link\">3030.link - URL Shortener</a>"
     msgstr "<a href = \"https://3030.link\">3030.link - 縮略網址服務</a>"
 
-        msgid "3030.link is a URL shotener that was build with MongoDB, Express.js, and Node.js."
+        msgid "3030.link is a URL shortener that was build with MongoDB, Express.js, and Node.js."
         msgstr "3030.link是一個使用MongoDB、Express.js以及Node.js架設的縮略網址服務。"
 
-        msgid "Every use has ten quotes which they could pay to get their customized short url for any url."
+        msgid "Every user has ten quotes which they could pay to get their customized short url for any url."
         msgstr "每個用戶有10個配額來為任意的網址生成短鏈接。"
 
 
@@ -565,6 +568,25 @@ msgstr "項目集"
         msgstr ""
         "這個網站也擁有内容管理系統之特性，並且在Lighthouse的性能評測中取得了100分。"
 
+    
+    msgid "<a href = \"/github/Pizza-Parlour\">Pizza Parlour APIs</a>"
+    msgstr "<a href = \"/github/Pizza-Parlour\">比薩店API</a>"
+
+        msgid "I created the Web APIs with Python and Flask."
+        msgstr "我使用了Python和Flask來製作這款網路應用API。"
+
+        msgid "Both integration and unit tests are applied, making sure that the features: order pizza, order drink, change order, check menu, set delivery, and so on, were implemented correctly."
+        msgstr "整合測試和單元測試都進行過，以確保諸如訂比薩，訂飲料，修改訂單，查看菜單，設定配送方式等功能都被正確實現。"
+
+
+    msgid "<a href = \"/github/LuxuryRentals-Database\">Luxury Rentals Database</a>"
+    msgstr "<a href = \"/github/LuxuryRentals-Database\">豪華旅館資料庫</a>"
+
+        msgid "I designed the Database Schema for a fictitious company “Luxury Rental” in a database course."
+        msgstr "我在一堂資料庫課程中為一家名為“豪華旅館”的虛擬公司設計資料庫綱要。"
+
+        msgid "The database they used was the relational PostgreSQL."
+        msgstr "他們使用關聯式資料庫PostgreSQL。"
 
 
     msgid "<a href = \"https://blog.panchen.xyz/cp\">CP - WordPress</a>"
