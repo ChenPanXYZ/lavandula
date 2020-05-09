@@ -1,6 +1,10 @@
 # Pan Chen's Personal Website
 Pan Chen's Personal Website 2020 version
 
+## Snapshots
+![enter image description here](https://upload.cc/i1/2020/05/09/FXQUI6.jpg)
+![enter image description here](https://upload.cc/i1/2020/05/09/P3HK54.jpg)
+
 ## Sitemap
 1. [Homepage](https://www.chenpan.xyz)
 2. [Guestbook](https://www.chenpan.xyz/guestbook)
