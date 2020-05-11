@@ -1,4 +1,7 @@
 <?php
+if((isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)){
+    return -1;
+}
 require_once '../../../config.php';
 $id = $_POST['id'];
 $order = $_POST['order'];

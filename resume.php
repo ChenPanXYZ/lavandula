@@ -83,8 +83,11 @@ foreach ($resume as $resume_section_id => $resume_section) {
 							<?php
 								for ($i = 0; $i < $resume_item_content_num; $i++) {
 									?>
-									<?php if ($_SERVER['HTTP_HOST'] != "www.panchen.xyz" && $resume_item_content[$i][0] == 95 || $resume_item_content[$i][0] == 96) {?>
-										<li class = "cgpa"><?php echo _($resume_item_content[$i][1]); ?></li><?php
+									<?php if ($resume_item_content[$i][0] == 96 || $resume_item_content[$i][0] == 95) {
+										if($_SERVER['HTTP_HOST'] == "www.panchen.xyz" || $_SERVER['HTTP_HOST'] == "www.pchen.org") {?>
+										<li><?php echo _($resume_item_content[$i][1]); ?></li>
+										<?php
+										}
 									}
 									else {
 										?>

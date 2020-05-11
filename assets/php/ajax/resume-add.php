@@ -1,6 +1,10 @@
 <?php
 require_once '../../../config.php';
 $type = $_POST['type'];
+
+if((isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)){
+    return -1;
+}
 if($type == 0) {
     $title = $conn->real_escape_string($_POST['title']);
     $sql = "INSERT INTO resume_sections (resume_section_title, resume_section_display_order) SELECT '$title', coalesce(MAX(resume_section_display_order), 0) + 1 FROM resume_sections";

@@ -1,5 +1,8 @@
 <?php
 require_once '../../../config.php';
+if((isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)){
+    return -1;
+}
 if(isset($_POST['resumeSectionCheckbox'])) 
 { 
 	$resumeSectionsIds = $_POST['resumeSectionCheckbox'];

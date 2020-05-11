@@ -105,6 +105,9 @@ function login(){
 }
 
 function approveComment() {
+	if((isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)){
+		return -1;
+	}
 	if(isset($_POST['approve']))  
 	{  
 		require "config.php";
@@ -132,6 +135,9 @@ function approveComment() {
 }
 
 function unapproveComment() {
+	if((isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)){
+		return -1;
+	}
 	if(isset($_POST['unapprove']))  
 	{  
 		require "config.php";
@@ -159,6 +165,9 @@ function unapproveComment() {
 }
 
 function deleteComment() {
+	if((isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)){
+		return -1;
+	}
 	if(isset($_POST['delete']))  
 	{  
 		require "config.php";
