@@ -1,4 +1,4 @@
-<form class = "guestbook-form">
+<form class = "guestbook-form" id = "guestbook-form">
 <script type="text/javascript">
 let recaptchaResponse
       var verifyCallback = function(response) {
@@ -43,12 +43,6 @@ let recaptchaResponse
                 </div>
             </div>
             <p id = "comment-form-reminder"><?php echo __("* You need to pass the anti-bot verification to give a message. If you don't see reCAPTCHA, please refresh your cache or try the incognito mode. Thank you."); ?></p>
-            <div id = "thankyou">
-				<p id = "do-not-show-it-to-my-distinguished-guest"><?php echo __('You want my thankyou? Give me a message, or no way!!') ?></p>
-				<span><?php echo __("Thank you :^) !")?></span>
-                <p><?php echo __("Your message has been sent to the database successfully.") ?></p> 
-                <p><?php echo __("It will display in the guestbook after a review.")?></p>
-            </div>
 
             @yield('like-dislike', View::make('like-dislike'))
         </form>

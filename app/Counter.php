@@ -18,7 +18,6 @@ class Counter extends Model
 
     public static function up(String $counterType, String $domain) {
         Counter::where('counter_type', $counterType)->increment('counter_value', 1);
-        setcookie("like-dislike", $counterType, time() + (86400), "/", $domain);
         return "thank you for your feedback!";
     }
     // public static function decrement(Request $request) {

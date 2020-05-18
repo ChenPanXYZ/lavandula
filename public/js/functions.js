@@ -12,6 +12,7 @@ function like() {
     }
     else {
       incrementCounter('like');
+      setCookie('like-dislike', 'like', mydomain, 86400);
       let number = parseInt(document.querySelector('#like-number').innerHTML);
       number = number + 1;
       document.querySelector('#like-number').innerHTML = number;
@@ -32,6 +33,7 @@ function like() {
     }
     else {
       incrementCounter('dislike');
+      setCookie('like-dislike', 'dislike', mydomain, 86400);
       let number = parseInt(document.querySelector('#dislike-number').innerHTML);
       number = number + 1;
       document.querySelector('#dislike-number').innerHTML = number;
@@ -60,13 +62,13 @@ function like() {
   }
       
   function setLanguage(language, mydomain){
-      setCookie('language', language, mydomain);
+      setCookie('language', language, mydomain, 2147483647);
       location.reload();
   }
   
-  function setCookie(cname, cvalue, mydomain) {
+  function setCookie(cname, cvalue, mydomain, duration) {
       var d = new Date();
-      d.setTime(d.getTime() + (2147483647));
+      d.setTime(d.getTime() + (duration));
       var expires = "expires="+ d.toUTCString();
       document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/" + ";domain=" + mydomain;
   }

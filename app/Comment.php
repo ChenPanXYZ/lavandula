@@ -46,7 +46,7 @@ class Comment extends Model
     
     
             if($comment) {
-                echo "<span><strong>" . $name . "</strong>, </span>";
+                return 200;
             }
             $content = nl2br($content);
             $to = 'pan@panchen.xyz';

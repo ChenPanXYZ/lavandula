@@ -23,13 +23,6 @@ class CounterController extends Controller
     
         $counterType = $request->counterType;
         // Need to set like dislike cookie for the root domain since it's a multilanguage website...
-        
-        if (isset($_COOKIE['like-dislike']) === false) {
-            return Counter::up($counterType, $domain);
-        }
-        else {
-            return 1;
-        }
-
+        return Counter::up($counterType, $domain);
     }
 }

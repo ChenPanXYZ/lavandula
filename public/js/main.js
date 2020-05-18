@@ -38,7 +38,7 @@ let stateCheck = setInterval(() => {
        }, 1000);
       $(".seen_cookie").click(function() {
           $("#cookie_consent").fadeOut(200);
-          setCookie('cookieConsent', 'seen', mydomain);
+          setCookie('cookieConsent', 'seen', mydomain, 2147483647);
       }); 
   }
     
@@ -211,9 +211,7 @@ function sendComment(recaptchaResponse) {
         else {
           $('#guestbook-form-body').slideUp();
 
-          $("#do-not-show-it-to-my-distinguished-guest").before($.parseHTML(html));
-          document.getElementById("do-not-show-it-to-my-distinguished-guest").style.display = "none";
-          document.getElementById("thankyou").style.display = "block";
+          $("#guestbook-form-body").after($.parseHTML(html));
         }
 
       }

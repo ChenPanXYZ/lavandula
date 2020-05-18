@@ -10,7 +10,12 @@ class CommentController extends Controller
 {
     //
     public function add(Request $request){
-        Comment::add($request);
+        if (Comment::add($request) == 200) {
+            return view('thankyou', ["name" => $request->name]);
+        }
+        else {
+            return -1;
+        }
     }
 
     public function delete(Request $request){

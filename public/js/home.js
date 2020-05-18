@@ -159,6 +159,15 @@ let stateCheck = setInterval(() => {
     }
 
 
+    if($('.guestbook-form').length !== 0) {
+      let head = document.getElementsByTagName('head')[0];
+      let script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = "https://www.recaptcha.net/recaptcha/api.js?onload=onloadCallback&render=explicit";
+      head.appendChild(script);
+  }
+
+
 
 
   }
