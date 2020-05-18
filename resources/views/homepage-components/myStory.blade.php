@@ -1,0 +1,8 @@
+<section class = "main-section content" id = "myStory">
+        <h2><?php echo __("My Story"); ?></h2>
+        <p><?php echo __("I was born and raised in Fuzhou, a coastal city in southeastern China. I spent my first eighteen years there. Many memories were formed there as I became an adult from a little boy."); ?></p>
+        <p><?php echo __("I was a lousy student until Grade 8 when I transformed myself into a good student. I don't know why I decided to make such change and locked my PSP and PS Vita in the safe at that time. But thanks to that year's hard-working, I was able to continue my studies at the best high school in the province - Fuzhou No.1 Middle School, and this is what I feel proudest of even today. Ever since then, I believe that <i>the harder you work, the luckier you are.</i>"); ?></p>
+        <p><?php echo __("And after I graduated from Fuzhou No.1 Middle School in 2017. I moved to Shenyang to study Computer Science and Technology at the Northeastern University. There, I decided to bring another significant change to my life. I chose to apply to the University of Toronto and got a place with my strong academic performance. And I came to where I am in the fall of 2018."); ?></p>
+        <p><?php echo __("I am a responsible person who takes his commitment very seriously. I always do my part with high quality within the promised time. And that’s why my friends can trust me."); ?></p>
+        <p><?php echo __("Besides, I own a wide range of interests, from music, movies to history, politics and so on. During my spare time, I work on my debut novel – Three Years in FZYZ, a book based on my real high school life."); ?></p>
+</section>

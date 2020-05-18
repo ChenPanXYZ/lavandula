@@ -1,0 +1,181 @@
+{
+    "Pan Chen - Computer Science student at the University of Toronto": "陈攀 - 多伦多大学计算机科学学生",
+        "Pan Chen is doing Specialist in Computer Science and Minor in Statistics Science at the University of Toronto. His research focus is Artificial Intelligence. This is his personal website.": "陈攀正在多伦多大学专修计算机科学，辅修统计科学。他的研究方向是人工智能。这是他的个人网站。",
+
+        "Pan Chen, 陈攀, Chen Pan, UofT, University of Toronto, AI, NLP, Artificial Intelligence, Natural Language Processing, Computer Science, Statistics Science": "Pan Chen, 陈攀, Chen Pan, UofT, University of Toronto, AI, 人工智能, 自然语言处理, 多伦多大学, 计算机科学, 统计科学",
+
+    "Guestbook - Pan Chen": "留言板 - 陈攀",
+        "Here is the guestbook, where my peers and friends leave their words to me.": "这里是留言板，有一起成长的小伙伴对我说的话。", 
+    "Resume - Pan Chen": "简历 - 陈攀",
+        "Here is the online resume of Pan Chen, who is currently a Computer Science Specialist student at the University of Toronto.": "这是陈攀的线上简历。他目前在多伦多大学专修计算机科学。",
+
+    "The page does not exist - Pan Chen": "此页面不存在 - 陈攀",
+        "I am sorry I haven't yet made a page for this address.<br>Maybe the navigation on the top can help you.": "很抱歉，我还没有为这个地址设计页面。<br>也许上面的导航能够帮到你。",
+
+
+    "Pan Chen": "陈攀",
+    "<a href=\"/\" class=\"active\" aria-label=\"Home\" onclick=\"header.adjust()\" target=\"_self\" rel=\"noopener\">Home</a>": "<a href=\"/\" class=\"active\" aria-label=\"Home\" onclick=\"header.adjust()\" target=\"_self\" rel=\"noopener\">主页</a>", 
+    "<a href = \"/blog\" aria-label=\"Chinese Version\" onclick=\"header.adjust()\" rel=\"noopener\">Blog</a>": "<a href = \"/blog\" aria-label=\"Chinese Version\" onclick=\"header.adjust()\" rel=\"noopener\">博客</a>",
+    "Story": "我的故事",
+    "Footprints": "我的足迹",
+    "Resume": "简历",
+    "Hi, there!<br>I am Pan Chen.<br>I am studying Computer Science and Statistics Science at the University of Toronto.<br>My research focus is Artificial Intelligence.<br>I am a friendly, helpful and hard-working person.<br>It's my pleasure that you could find me in the corner of the Internet.<br>- Pan Chen": "你好!<br>我是陈攀。<br>我是多伦多大学计算机科学与统计科学的学生。<br>我的研究方向是人工智能。<br>我是一个友善、乐于助人、勤奋的人。<br>能够在互联网的角落里遇见你，真好！<br>- 陈攀",
+
+    "My Story": "我的故事",
+        "I was born and raised in Fuzhou, a coastal city in southeastern China. I spent my first eighteen years there. Many memories were formed there as I became an adult from a little boy.": "我在中国东南部的福州出生长大。在那里我有许多美好的回忆。",
+        "I was a lousy student until Grade 8 when I transformed myself into a good student. I don't know why I decided to make such change and locked my PSP and PS Vita in the safe at that time. But thanks to that year's hard-working, I was able to continue my studies at the best high school in the province - Fuzhou No.1 Middle School, and this is what I feel proudest of even today. Ever since then, I believe that <i>the harder you work, the luckier you are.</i>": "在我八年级之前我一直都是一个“坏学生”。直到初二的时候，我也不知道是为了什么，我突然决定想成为一名“好学生”，并且将我的PSP游戏机锁了起来。多亏了那一年的努力学习，我得以在全省最好的高中——福州第一中学继续我的学习。这是我时至今日依然最为自豪的一件事情。",
+        "And after I graduated from Fuzhou No.1 Middle School in 2017. I moved to Shenyang to study Computer Science and Technology at the Northeastern University. There, I decided to bring another significant change to my life. I chose to apply to the University of Toronto and got a place with my strong academic performance. And I came to where I am in the fall of 2018.": "2017年我从福州一中毕业了之后，我来到了沈阳的东北大学学习计算机科学与技术。在那里，我又一次决定要做出一个重大的改变。我申请了多伦多大学，并且凭借着优异的成绩被录取了。于是我在2018年的8月份搬到了我现在所在的地方。",
+        "I am a responsible person who takes his commitment very seriously. I always do my part with high quality within the promised time. And that’s why my friends can trust me.": "我是一个有责任心的人。我总能够在承诺的时间里完成我的任务，这也就是别人能够信赖我的原因。",
+        "Besides, I own a wide range of interests, from music, movies to history, politics and so on. During my spare time, I work on my debut novel – Three Years in FZYZ, a book based on my real high school life.": "除此之外，我有着广泛的兴趣，从音乐、电影到历史、政治等等。闲暇之时，我会创作我的第一本小说，一本基于我真实高中生活的小说。",
+
+    "My Projects": "我的项目",
+    "My Footprints": "我的足迹",
+        "I love travelling. It makes me realize how diverse our world is and the importance of thinking in a more comprehensive way.": "我喜欢旅行。旅行让我明白了我们的世界是多么的多元化以及多元思考的重要性。",
+
+    "Guestbook": "留言板",
+        "More Comments": "更多留言",
+        "Name": "姓名",
+            "Your Name": "你的名字",
+        "Email": "电子邮箱",
+            "Email Address": "电子邮箱地址",
+        "Your Message": "你的留言",
+        "Submit": "送出留言",
+
+        ">:O Please fill all the required fields and try again.": ">:O 请填完所有必填项并再次尝试。",
+        ">:/ Please provide a valid email address.": ">:/ 请告诉我一个有效的电子邮箱地址。",
+        "Thanks for your LIKE B^D. I will keep working hard to make myself a better person!": "感谢您的厚爱 B^D，我会继续努力，成为一个更好的自己！",
+        "You have already given me a LIKE today. If I still deserve your LIKE, please come again tomorrow!": "您今天已经给过我赞了。如果您认为我依然值得获得您的赞，欢迎明天再来！",
+        "What did I do to deserve your DISLIKE D:<. I am a good person I promise!": "我做了什麽，你居然给我倒赞 D:<。我保证我是一个好人！",
+        "You have already given me a DISLIKE today. Please give me a change to behave myself!": "你今天已经给过我倒赞了。请给我一个机会改过自新吧！",
+        "You changed you mind... Thank you! But please come again tomorrow.": "你改变了主意......感谢你！但是还请你明天再来。",
+        "Well, I give you 24 hours so that you could think if this gentleman deserves a DISLIKE.": "好吧，我会给你24个小时让你重新考虑一下你是否真的应该给这个年轻人倒赞。",
+        "You must allow cookie to give me a LIKE or DISLIKE.": "您必须要允许cookie才可以给我赞或倒赞。",
+
+        "Your message has been sent to the database successfully.": "数据库已成功接收您的留言。",
+        "It will display in the guestbook after a review.": "在审核之后，您的信息将出现在留言板中。",
+        "Thank you :^) !": "谢谢您:^)！",
+
+        "* You need to pass the anti-bot verification to give a message. If you don't see reCAPTCHA, please refresh your cache or try the incognito mode. Thank you.": "* 你需要通过人机测试方可留言（只需点击一下即可）。如果你没有看到测试框，请试试清除缓存或尝试无痕模式，谢谢你。",
+
+        "You want my thankyou? Give me a message, or no way!!": "你想要我说谢谢你吗？那就给我留个言，否则，没门！！",
+
+        "%s said on %s": "%s于%s说了",
+        "M d, Y": "Y年m月d日",
+
+    "Web Hosting by Hetzner": "Hetzner提供云计算服务",
+    "CDN by Cloudflare": "Cloudflare提供内容传递网络",
+
+
+    "people have visited my website!": "人到访过我的网站！",
+
+    "<a href=\"https://en.wikipedia.org/wiki/HTTP_cookie\"  aria-label=\"Wikipedia\" rel=\"nofollow noopener\" target=\"_blank\">": "<a href=\"https://zh.wikipedia.org/zh-cn/Cookie\"  aria-label=\"Wikipedia\" rel=\"nofollow noopener\" target=\"_blank\">",
+
+
+    "This website uses cookies to ensure you get the best experience on our website.": "本网站使用cookies以便你在本网站获得最佳体验。",
+    "More info": "了解更多",
+    "That's Fine": "没问题",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "Education": "教育经历",
+        "Honours Bachelor of Science | University of Toronto – St. George | September 2018 - Present": "荣誉理学士 | 多伦多大学 - 圣乔治校区 | 2018年9月 - 今",
+            "Specialist: <a href = \"https://web.cs.toronto.edu\">Computer Science</a>, focusing in Artificial Intelligence and Natural Language Processing.": "专修：<a href = \"https://web.cs.toronto.edu\">计算机科学</a>、 研究方向：人工智能与自然语言处理",
+
+            "Minor: <a href = \"https://www.statistics.utoronto.ca/\">Statistics Science</a>, <a href = \"https://www.eas.utoronto.ca/\">Eastern Asian Studies</a>": "辅修：<a href = \"https://www.statistics.utoronto.ca/\">统计科学</a>, <a href = \"https://www.eas.utoronto.ca/\">东亚学</a>",
+
+            "Computer Science related courses: Introduction to Computer Science, Mathematical Expression and Reasoning for Computer Science, Software Design, Linear Algebra II, Probability with Computer Applications, Introduction to Language, Introduction to the Theory of Computation, Software Tools and Systems Programming, Data Structures and Analysis, The Design of Interactive Computational Media, Introduction to Databases, Introduction to Software Engineering, Programming on the Web, Introduction to Combinatorics": "计算机科学相关课程：计算机科学导论，计算机科学的数学表达与逻辑推理，软件设计，线性代数2，计算机概率应用，语言学导论，计算原理导论，工具软件与系统程序设计，数据结构与分析，交互式计算机媒体设计，数据库导论，软件工程导论，网络应用开发，组合学导论",
+
+        "Bachelor of Engineering (unfinished) | Northeastern University | September 2017 – July 2018": "工学士（未完成） | 东北大学 | 2017年9月 - 2018年7月",
+
+            "Major: <a href = \"http://www.cse.neu.edu.cn\">Computer Science and Technology</a>": "主修：<a href = \"http://www.cse.neu.edu.cn\">计算机科学与技术</a>",
+
+            "Computer Science related courses: Advanced Mathematics, Discrete Mathematics, Fundamentals of Programming: C, Introduction to Computer Science, Linear Algebra, Object-oriented Programming: C++, Introduction to Deep Learning": "计算机科学相关课程：高等数学，离散数学，编程基础：C语言，线性代数，面向对象程序设计：C++，深度学习介绍",
+
+        "Extra Courses": "其他课程",
+            "Data Science Professional by IBM": "由IBM提供的数据科学专业课程",
+            "Web Applications for Everybody by University of Michigan": "由密歇根大学提供的网络应用开发课程",
+
+    "Skills": "技能",
+        "Languages": "程序语言",
+        "Frameworks/Libraries": "框架/函式库",
+        "Techniques": "技术",
+        "Tools": "工具",
+        "Database": "数据库",
+        "Operating System": "操作系统",
+
+    "Projects": "项目",
+
+        "<a href = \"https://3030.link\">3030.link - URL Shortener</a>": "<a href = \"https://3030.link\">网址缩略器</a>",
+            "3030.link is a URL shortener that was build with MongoDB, Express.js, and Node.js.": "3030.link是一个使用MongoDB、Express.js以及Node.js架设的缩略网址服务。",
+            "Every user has ten quotes which they could pay to get their customized short url for any url.": "每个用户有10个配额来为任意的网址生成短链接。",
+
+        "Your Today": "你的今日",
+            "Your Today is a Web Application that is built with Express for the backend, ReactJS for the frontend, and MongoDB for the databse. Many frameworks / libraries / External API have been used, such as Material-UI, Socket.IO, OpenWeatherMap and so on.": "Your Today是一个后端采用Express，前端采用ReactJS，数据库采用MongoDB开发的网络应用。许多框架/库/外部API被使用，比如说Material-UI、Socket.IO、OpenWeatherMap等等。",
+            "I developed this webapp in a team of four.": "我与另外三名同学一起开发了这款网络应用。",
+            "The aim of Your Today is to give the user the ability to have a highly-customized homepage for their browser. For instance, they can create a list of most-visited websites so that they can visit these websites more easily.": "Your Today的目的在于让用户能够为浏览器创造一个高度自定义的主页。比方说，他们可以创建最常访问网页清单，以便能够更方便地访问这些网页。",
+            "The webapp also brings instant messaging features. Knowing a person's username, you can send the person a message. If the person is online, he well get the message immediately.": "这款网络应用也具备“实时通讯”特性。只要知道一个人的用户名，你就可以给这个人发一则消息。如果这个人正在在线，他会立马收到这则消息。",
+
+        "Dynamic Resume Management System": "动态简历管理系统",
+            "Using HTML, JavaScript (and JQuery), CSS and PHP and with the knowledege of AJAX, JSON, and SQL. I built this Dynamic Resume Management System.": "使用HTML, JavaScript，CSS以及PHP，运用了AJAX, JSON和SQL的知识，我制作了这一款动态简历管理系统。",
+            "You can login the Admin Panel with your username and password, and then you can add / update / delete any stuff from your resume. There is no easier way to get your resume online!": "你可以通过用户名跟密码登录后台，在那增加/更新/删除一切有关于你的简历的东西。没有比这更简单的方法来将你的简历送上云端！",
+            "What's more, the resume generated by this system is completely mobile friendly, that makes it easy for everyone to view your resume everywhere.": "更重要的是，由此系统产生的简历是移动友好的，这让所有人在任何地方都很容易查看你的简历。",
+            "My resume here is generated by this system.": "你现在所看到的这份简历，正是由此系统产生。",
+
+        "<a href = \"/github/website\">Personal Website</a>": "<a href = \"/github/website\">个人网站</a>",
+            "Designed and Maintained my personal website on an Ubuntu server like a full-stack developer, with the skills of HTML, CSS, JavaScript, SQL, PHP, and Ubuntu.": "在一台Ubuntu服务器上像一个全栈开发者一样设计并维护我的个人网站，运用了HTML, CSS, JavaScript, SQL, PHP和Ubuntu的知识。",
+            "The brand-new 2020 version is refactored using Laravel, the PHP framework which follows the model–view–controller architectural pattern.": "全新的2020年版本用Laravel重构。Laravel是一个遵循MVC模式的PHP框架。",
+            "The website also has CMS features and it wins a 100% Lighthouse performance score.": "这个网站也拥有内容管理系统的特性，并且在Lighthouse的性能评测中取得了100分。",
+
+        "<a href = \"/github/Pizza-Parlour\">Pizza Parlour APIs</a>": "比萨店API",
+            "I created the Web APIs with Python and Flask.": "我使用了Python和Flask来制作这款网络应用API。",
+            "Both integration and unit tests are applied, making sure that the features: order pizza, order drink, change order, check menu, set delivery, and so on, were implemented correctly.": "集成测试和单元测试都进行过，以确保诸如订比萨，订饮料，修改订单，查看菜单，设置配送方式等功能都被正确实现。",
+
+        "<a href = \"/github/LuxuryRentals-Database\">Luxury Rentals Database</a>": "<a href = \"/github/LuxuryRentals-Database\">豪华旅馆数据库</a>",
+            "I designed the Database Schema for a fictitious company \"Luxury Rental\" in a database course.": "我在一堂数据库课程中为一家名为“豪华旅馆”的虚拟公司设计数据库结构。",
+            "The database they used was the relational PostgreSQL.": "他们使用关联式数据库PostgreSQL。",
+
+        "<a href = \"https://blog.panchen.xyz/cp\">CP - WordPress</a>": "<a href = \"https://blog.panchen.xyz/cp\">为WordPress开发CP主题</a>",
+            "Developed a theme for a content management system named WordPress which has powered more than one third of the websites globally.": "为WordPress（全球超过三分之一网站背后的内容管理系统）开发了一个主题。",
+            "Applied Masonry Layout Design, Enabled the Customizability to better the user experience. Other features include fixed header, pop-out panel, dynamic description, read progress indicator.": "应用了瀑布流布局设计、改进了客制化功能以提供更好的用户体验。其他功能包括了吸顶式头部、弹出面板、动态描述、浏览进度条。",
+
+        "<a href = \"/snake\">Face-Control Snake Game</a>": "<a href = \"/snake\">用脸控制的贪吃蛇游戏</a>",
+            "Applied a TensorFlow model called PoseNet to detect the player’s position in real time, so that the player can move their face to control their snake to eat more apples.": "应用了一个名叫PoseNet的TensorFlow模型来实时检测用户的脸部位置，从而实现了让用户通过移动脸来控制贪吃蛇吃更多的苹果。",
+
+        "<a href = \"/github/Prefix-Trees-and-Melodies\">Prefix trees and Melodies</a>": "<a href = \"/github/Prefix-Trees-and-Melodies\">前缀树与曲调</a>",
+            "The program stores words and their prefix’s in the Tree data structure. And people can look up a prefix and then get a list of the corresponding words that have the prefix. This program was written in Python.": "这个程序存储了单词与他们的前缀，放在一个树结构里。人们可以输入前缀来获得与前缀相匹配的所有单词。这个程序是用Python写的。",
+
+        "<a href = \"/github/tensorflow-mnist\">Neural Network with MNIST database</a>": "<a href = \"/github/tensorflow-mnist\">使用MNIST数据库训练的神经网络</a>",
+            "Applied image classification with 95.96% accuracy on the MNIST dataset using a neural network applied through TensorFlow.": "通过Tensorflow，实现了对MNIST数据集95.96%的图像辨识率。",
+
+        "<a href = \"/github/Specification-for-the-ATM-Machine\">Bank Management System</a>": "<a href = \"/github/Specification-for-the-ATM-Machine\">银行管理系统</a>",
+            "Applied a variety of software design patterns including Iterator, Observer, Strategy, and model–view–controller. Also designed a fully functional GUI for user input using the java swing package.": "应用了各式各样的设计模式，包括迭代器、观察者、策略、MVC。同时我们也藉助Java的Swing包实现了一个可供用户输入的可视化界面。",
+            "Implemented software testing code using JUnit.": "使用JUnit完成了软件测试。",
+
+        "Library Management System": "图书馆管理系统",
+            "The library management system was developed with my classmates at Northeastern University. This library management system satisfies the basic needs for library management such as borrowing books, returning books, and searching for books. This library management system was written in C++.": "这个图书馆管理系统是由我和我在东北大学的同学一起完成的。这个系统能够满足图书馆管理的基本要求，例如借书、还书与查找书籍。这个图书馆管理系统是用C++写的。",
+
+        "<a href = \"/github/csc258-project\">Whack A Mole</a>": "<a href = \"/github/csc258-project\">打地鼠</a>",
+            "Developed a popular arcade redemption game with Verilog in FPGA board.": "在FPGA开发板上制作了流行的打地鼠游戏。",
+
+
+        "Dashboard - Pan Chen": "控制台 - 陈攀",
+
+        "Snake": "贪吃蛇",
+        "Score": "得分",
+        "Or You can try playing the brand-new face-control snake game!": "或者你可以试一试全新的脸部控制贪吃蛇！",
+        "The AI module is on the way": "AI模块正在赶来的路上",
+        "Start": "开玩",
+        "GAMEOVER": "撞墙了",
+        "Try Again!": "再试一次！"
+}

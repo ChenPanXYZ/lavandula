@@ -1,5 +1,7 @@
 # Pan Chen's Personal Website
-Pan Chen's Personal Website 2020 version
+Pan Chen's Personal Website 2021 version
+
+Refactored using Laravel framework, the PHP framework which follows the model–view–controller architectural pattern.
 
 ## Snapshots
 ![enter image description here](https://upload.cc/i1/2020/05/09/FXQUI6.jpg)
@@ -16,6 +18,9 @@ Pan Chen's Personal Website 2020 version
 2. CSS
 3. JavaScript
 4. PHP
+
+## Framework
+1. Laravel
 
 ## Libraries
 1. JQuery

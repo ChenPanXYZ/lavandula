@@ -1,0 +1,57 @@
+<IfModule mod_rewrite.c>
+
+
+RewriteEngine On 
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+
+# One year for image files
+<filesMatch ".(jpg|jpeg|png|gif|ico|eot|woff2|woff|ttf|svg|js|webp)$">
+Header set Cache-Control "max-age=31536000, public"
+</filesMatch>
+# One month for css and js
+<filesMatch ".(css|js)$">
+Header set Cache-Control "max-age=31536000, public"
+</filesMatch>
+
+RedirectMatch 301 ^/facebook$ https://www.facebook.com/ChenPanXYZ
+RedirectMatch 301 ^/instagram$ https://www.instagram.com/ChenPanXYZ
+RedirectMatch 301 ^/twitter$ https://www.twitter.com/ChenPanXYZ
+RedirectMatch 301 ^/github$ https://www.github.com/ChenPanXYZ
+RedirectMatch 301 ^/linkedin$ https://www.linkedin.com/in/ChenPanXYZ
+RedirectMatch 301 ^/weibo$ https://www.weibo.com/ChenPanXYZ
+RedirectMatch 301 ^/game/snake$ https://projects.chenpan.xyz/snake
+RedirectMatch 301 ^/game/snake/$ https://projects.chenpan.xyz/snake
+RedirectMatch 301 ^/snake$ https://projects.chenpan.xyz/snake
+RedirectMatch 301 ^/snake/$ https://projects.chenpan.xyz/snake
+RedirectMatch 301 ^/github/website$ https://github.com/ChenPanXYZ/lavandula
+Redirect permanent /github http://www.github.com/chenpanxyz
+RewriteBase /
+Redirect permanent /blog https://blog.chenpan.xyz/
+
+
+Modpagespeed On
+
+</IfModule>
