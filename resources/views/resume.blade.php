@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php $visitorNumber = get_counter_number('visitor');?>
 <html lang={{$languageCode}}>
 <script>const mydomain = "{{$domain}}";</script>
 <head>
@@ -114,7 +113,7 @@ foreach ($resume as $resume_section_id => $resume_section) {
 
 </section>
 
-@yield('like-dislike', View::make('like-dislike'))
+@yield('like-dislike', View::make('like-dislike', ["likeNumber" => $likeNumber, "dislikeNumber" => $dislikeNumber]))
 </div>
 <footer id="footer">
 <div id = "copyright">
@@ -133,6 +132,5 @@ foreach ($resume as $resume_section_id => $resume_section) {
 	</div>
 </footer>
 <script type="text/javascript" src="/js/modal.js" async></script>
-<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 </body>
 </html>

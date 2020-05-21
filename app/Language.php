@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Counter;
 
 class Language extends Model
 {
@@ -26,6 +27,8 @@ class Language extends Model
 
     function init($visitorNumber){
         $pathinfo = $_SERVER['REQUEST_URI'];
+
+
         if (substr($this->domain, 0, 4) === 'www.') 
         {
             $this->domain = substr($_SERVER['HTTP_HOST'], 4);
@@ -34,10 +37,6 @@ class Language extends Model
         else if (in_array(substr($this->domain, 0, 3), array('cn.', 'tw.'))) 
         {
             $this->domain = substr($_SERVER['HTTP_HOST'], 3);
-        }
-        if ($pathinfo == '/index') 
-        {
-            $pathinfo = '';
         }
         
         // Full URL, https://www.chenpan.xyz/guestbook
@@ -100,7 +99,7 @@ class Language extends Model
                     $language = "en";
                 }
                 setcookie("language", $language, time() + (2147483647), "/", $this->domain);
-                increment_counter('visitor');
+                Counter::up('visitor');
                 $visitorNumber += 1;
             }
         

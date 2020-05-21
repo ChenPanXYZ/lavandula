@@ -101,9 +101,15 @@ class Game {
       this.food = {x: 0, y: 0}
   
       this.score
+
+      this.highestScore = getCookie("highest-score")
   
   
       this.scoreElement = document.getElementById("score-value")
+
+      this.speedElement = document.getElementById("speed-value")
+
+      this.highestScoreElement = document.getElementById("highest-score-value")
 
       this.canvas.width = window.innerWidth * 0.6;
       this.canvas.height = window.innerHeight * 0.6;
@@ -116,9 +122,18 @@ class Game {
         case 0: this.gameArea.style.display = "block"
       }
     }
+
+    changeSpeed(value) {
+      this.speedElement.innerHTML = value + " km/h"
+    }
   
     changeScore(value) {
       this.scoreElement.innerHTML = String(value)
+    }
+
+    changeHighestScore(value) {
+      this.highestScoreElement.innerHTML = String(value)
+      setCookie('highest-score', value, mydomain, 86400000 * 365);
     }
   
     addFood() {
@@ -206,7 +221,14 @@ class Game {
       if(this.checkBlock(this.snake[0].x, this.snake[0].y, this.food.x, this.food.y)){
         this.snake[this.snake.length] = {x: this.snake[0].x, y: this.snake[0].y};
         this.score += 1;
+        if(this.score > this.highestScore) {
+          this.highestScore = this.score
+          this.changeHighestScore(this.highestScore)
+        }
+        this.snakeSpeed = 150 / (1 + this.score / 10);
+        console.log(this.snakeSpeed)
         this.changeScore(this.score);
+        this.changeSpeed(60 * (1 + this.score / 10));
         this.addFood();
         this.activeDot(this.food.x, this.food.y);
       }
@@ -240,6 +262,8 @@ class Game {
       this.score = 0
   
       this.changeScore(this.score)
+  
+      this.changeSpeed(60)
       
       this.addFood();
   
@@ -255,6 +279,11 @@ class Game {
   }
   let loadingCheck = setInterval(() => {
     if (document.readyState === 'complete' && direction) {
+      if(!getCookie("highest-score")) {
+        setCookie('highest-score', 0, mydomain, 86400000 * 365);
+      }
+
+      document.getElementById("highest-score-value").innerHTML = getCookie('highest-score')
       clearInterval(loadingCheck)
       startButton = document.getElementById("start-button")
       restartButton = document.getElementById("restart-button")
@@ -279,3 +308,5 @@ class Game {
       })
     }
   }, 100);
+
+

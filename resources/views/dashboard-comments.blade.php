@@ -1,6 +1,7 @@
 <?php
 use App\Language;
-$visitorNumber = get_counter_number('visitor');
+use App\Counter;
+$visitorNumber = Counter::getData('visitor');
 $language = new Language();
 $language->init($visitorNumber);
 $domain = $language->getDomain(); 

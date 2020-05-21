@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Language;
+use App\Counter;
 
 use Response;
 
@@ -18,7 +19,7 @@ class AdminPageController extends Controller
     public function showResumeAdmin()
     {
         $language = new Language();
-        $visitorNumber = get_counter_number('visitor');
+        $visitorNumber = Counter::getData('visitor');
         $feedback = $language->init($visitorNumber);
         if(!($feedback === 0)) {
             return redirect($feedback);
@@ -31,7 +32,7 @@ class AdminPageController extends Controller
     public function showCommentsAdmin()
     {
         $language = new Language();
-        $visitorNumber = get_counter_number('visitor');
+        $visitorNumber = Counter::getData('visitor');
         $feedback = $language->init($visitorNumber);
         if(!($feedback === 0)) {
             return redirect($feedback);

@@ -67,9 +67,9 @@ function like() {
   }
   
   function setCookie(cname, cvalue, mydomain, duration) {
-      var d = new Date();
-      d.setTime(d.getTime() + (duration));
-      var expires = "expires="+ d.toUTCString();
+      let d = new Date();
+      d.setTime(d.getTime() + (duration) * 1000);
+      const expires = "expires="+ d.toUTCString();
       document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/" + ";domain=" + mydomain;
   }
       

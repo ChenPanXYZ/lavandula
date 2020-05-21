@@ -80,11 +80,17 @@ body {
     <div id = "game-body">
         <canvas id="game-box" class="align-center" width="0" height="0" tabindex="1"></canvas>
 
-        <p class="score"><?php echo __("Score") ?>: <span id="score-value">0</span></p>
-    
+        <div id = "stat">
+
+            <p class="score"><?php echo __("Score") ?>: <span id="score-value">0</span></p>
+
+            <p class="score"><?php echo __("Highest Score") ?>: <span id="highest-score-value">...</span></p>
+
+            <p class="speed"><?php echo __("Your Speed") ?>: <span id="speed-value">0 km/h</span></p>
+        </div>
         <div id="menu">
-            <a id="loading-reminder"><?php echo __("The AI module is on the way") ?><br> 🏃 🏃 🏃 🏃 🏃</a>
-            <a id="start-button"><?php echo __("Start") ?> 👍</a>
+            <a id="loading-reminder"><?php echo __("AI module is coming") ?><br> 🏃 🏃 🏃 🏃 🏃</a>
+            <a id="start-button"><?php echo __("Start") ?> 🤞</a>
             <a id="gameover"><?php echo __("GAMEOVER") ?>😢</a>
             <a id = "restart-button"><?php echo __("Try Again!") ?></a>
         </div>
@@ -93,7 +99,5 @@ body {
 @endsection('footer')
 
 @section('footer')
-    @yield('footer', View::make('footer'))
+    @yield('footer', View::make('footer', ["visitorNumber" => $visitorNumber]))
 @endsection('footer')
-
-<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>

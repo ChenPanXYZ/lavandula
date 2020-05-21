@@ -13,12 +13,10 @@
     @yield('projects', View::make('homepage-components/projects', ["resume" => $resume]))
     @yield('myStory', View::make('homepage-components/myStory'))
     @yield('map', View::make('homepage-components/map'))
-    @yield('guestbook', View::make('homepage-components/guestbook'))
+    @yield('guestbook', View::make('homepage-components/guestbook', ["likeNumber" => $likeNumber, "dislikeNumber" => $dislikeNumber]))
 @endsection
 
 
 @section('footer')
-    @yield('footer', View::make('footer'))
+    @yield('footer', View::make('footer', ["visitorNumber" => $visitorNumber]))
 @endsection
-
-<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>

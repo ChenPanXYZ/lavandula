@@ -5,6 +5,6 @@
     <div class = "guest-comments">
     <?php showGuestbookComments(6);?>
     </div>
-    @yield('guestbook-form', View::make('guestbook-form'))
+    @yield('guestbook-form', View::make('guestbook-form', ["likeNumber" => $likeNumber, "dislikeNumber" => $dislikeNumber]))
 </section>
 <?php loadFonts(); ?>
