@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Language;
 use App\Counter;
+use App\Comment;
+
 
 use Response;
 
@@ -25,7 +27,7 @@ class AdminPageController extends Controller
             return redirect($feedback);
         }
         else {
-            return view('dashboard', ["languageCode" => $language->getLanguageCode(), "domain"=>$language->getDomain(), "languageUrls" => $language->getLanguageUrls(), "resume" => \App\Resume_Section::getAll()]);
+            return view('dashboard-components/dashboard', ["languageCode" => $language->getLanguageCode(), "domain"=>$language->getDomain(), "languageUrls" => $language->getLanguageUrls(), "resume" => \App\Resume_Section::getAll()]);
         }
     }
 
@@ -34,11 +36,13 @@ class AdminPageController extends Controller
         $language = new Language();
         $visitorNumber = Counter::getData('visitor');
         $feedback = $language->init($visitorNumber);
+        $approvedComments = Comment::getProvedByTime();
+        $unapprovedComments = Comment::getUnprovedByTime();
         if(!($feedback === 0)) {
             return redirect($feedback);
         }
         else {
-            return view('dashboard-comments', ["languageCode" => $language->getLanguageCode(), "domain"=>$language->getDomain(), "languageUrls" => $language->getLanguageUrls()]);
+            return view('dashboard-components/dashboard-comments', ["languageCode" => $language->getLanguageCode(), "domain"=>$language->getDomain(), "languageUrls" => $language->getLanguageUrls(), "approvedComments" => $approvedComments, "unapprovedComments" => $unapprovedComments]);
         }
     }
 }

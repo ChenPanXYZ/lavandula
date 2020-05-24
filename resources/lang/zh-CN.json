@@ -171,6 +171,12 @@
 
         "Dashboard - Pan Chen": "控制台 - 陈攀",
 
+            "Unapproved": "还未审阅",
+            "Approved": "已经审阅",
+            "Approve": "通过",
+            "Unapprove": "驳回",
+            "Delete": "删除",
+
         "Snake": "贪吃蛇",
         "Score": "得分",
         "Or You can try playing the brand-new face-control snake game!": "或者你可以试一试全新的脸部控制贪吃蛇！",

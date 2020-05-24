@@ -19,38 +19,9 @@
         <link rel="alternate" href="{{$languageUrls[1]}}" hreflang="zh" />
         <meta name="msapplication-TileColor" content="#268785">
         <meta name="theme-color" content="#268785">
+        @if($languageCode == "en")
+            @php print_r('<link href="/fonts/pan-sans/stylesheet.css" rel="stylesheet">'); @endphp
+        @endif
     </head>
 
     <div id = "loading"></div>
-<style>
-#loading {
-    visibility: visible;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center; 
-    background-color: #268785;
-    background-image: url("/android-chrome-192x192.png");
-}
-
-body {
-	  overflow-y: hidden;
-}
-#page {
-    visibility: hidden;
-}
-.show {
-	opacity: 1;
-	transition: opacity 1000ms;
-  }
-  
-  .hide {
-	opacity: 0;
-	transition: opacity 1000ms;
-  }
-
-</style>

@@ -31,7 +31,7 @@ body:lang(en), button:lang(en), #name>h1:lang(en) {
   font-family: 'Pan Sans', serif;
 }
 h1:lang(en), h2:lang(en), h3:lang(en), h4:lang(en) {
-  font-family: 'Roboto', serif;
+  font-family: Calibri, -apple-system, Arial, sans-serif;
 }
 
 body {
@@ -104,7 +104,7 @@ button::-moz-focus-inner {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 6px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Calibri, -apple-system, Arial, sans-serif;
 }
 
 /*The Table*/
@@ -361,7 +361,7 @@ ul {
   display: inline-block;
   padding: 15px;
   margin-bottom: 15px;
-  font-family: 'Roboto', Georgia, -apple-system, 'Nimbus Roman No9 L', Arial, sans-serif;
+  font-family: Calibri, -apple-system, Arial, sans-serif;
 }
 
 .guest-comment-content {
@@ -412,7 +412,7 @@ ul {
 }
 
 #footer {
-  font-family: 'Roboto', Georgia, -apple-system, 'Nimbus Roman No9 L', Arial, sans-serif;
+  font-family: Calibri, -apple-system, Arial, sans-serif;
 }
 
 /*Popup Reminder*/
@@ -550,7 +550,7 @@ ul {
   cursor: pointer;
   width: 60%;
   /* height: 50px; */
-  font-family: 'Roboto', Georgia, -apple-system, 'Nimbus Roman No9 L', Arial, sans-serif;
+  font-family: Calibri, -apple-system, Arial, sans-serif;
   height: 22px;
 }
 
@@ -593,4 +593,8 @@ ul {
 
 #next-page-button {
   float: right;
+}
+
+#thankyou {
+  display: none;
 }

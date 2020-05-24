@@ -1,9 +1,18 @@
-<section class = "main-section content" id = "guestbook">
+@extends('layouts.app')
+
+@section('head')
+    @yield('head', View::make('guestbook-components/head', ["languageCode" => $languageCode, "languageUrls" => $languageUrls]))
+
+@section('header')
+    @yield('header', View::make('shared-components/header', ["domain" => $domain, "languageUrls" => $languageUrls]))
+@endsection
 
 
-<h2><?php echo __("Guestbook"); ?></h2>
-    <div class = "guest-comments">
-    <?php showGuestbookComments(0);?>
-    </div>
-    @yield('guestbook-form', View::make('guestbook-form', ["likeNumber" => $likeNumber, "dislikeNumber" => $dislikeNumber]))
-</section>
+@section('sections')
+    @yield('guestbook', View::make('shared-components/guestbook', ["likeNumber" => $likeNumber, "dislikeNumber" => $dislikeNumber, "comments" => $comments, "commentsNumber" => $commentsNumber]))
+@endsection
+
+
+@section('footer')
+    @yield('footer', View::make('shared-components/footer', ["visitorNumber" => $visitorNumber]))
+@endsection

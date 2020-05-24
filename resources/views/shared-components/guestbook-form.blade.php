@@ -44,5 +44,6 @@ let recaptchaResponse
             </div>
             <p id = "comment-form-reminder"><?php echo __("* You need to pass the anti-bot verification to give a message. If you don't see reCAPTCHA, please refresh your cache or try the incognito mode. Thank you."); ?></p>
 
-            @yield('like-dislike', View::make('like-dislike', ["likeNumber" => $likeNumber, "dislikeNumber" => $dislikeNumber]))
+            @yield('like-dislike', View::make('shared-components/like-dislike', ["likeNumber" => $likeNumber, "dislikeNumber" => $dislikeNumber]))
+            @yield('thankyou', View::make('shared-components/thankyou'))
         </form>

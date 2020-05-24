@@ -25,6 +25,9 @@
         <script src='https://unpkg.com/ml5@0.1.1/dist/ml5.min.js'></script>
         <link rel="stylesheet" href="/css/404game.css" defer>
         <script type="text/javascript" src="/js/404game.js"></script>
+        @if($languageCode == "en")
+            @php print_r('<link href="/fonts/pan-sans/stylesheet.css" rel="stylesheet">'); @endphp
+        @endif
     </head>
 
     <div id = "loading"></div>
@@ -61,7 +64,7 @@ body {
 
 </style>
 @section('header')
-    @yield('header', View::make('header', ["domain" => $domain, "languageUrls" => $languageUrls]))
+    @yield('header', View::make('shared-components/header', ["domain" => $domain, "languageUrls" => $languageUrls]))
 @endsection
 
 @section('sections')
@@ -96,8 +99,8 @@ body {
         </div>
     </div>
 </div>
-@endsection('footer')
+@endsection('sections')
 
 @section('footer')
-    @yield('footer', View::make('footer', ["visitorNumber" => $visitorNumber]))
+    @yield('footer', View::make('shared-components/footer', ["visitorNumber" => $visitorNumber]))
 @endsection('footer')

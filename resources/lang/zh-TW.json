@@ -171,6 +171,11 @@
 
 
         "Dashboard - Pan Chen": "控制台 - 陳攀",
+            "Unapproved": "還未審閲",
+            "Approved": "已經審閲",
+            "Approve": "通過",
+            "Unapprove": "駁回",
+            "Delete": "刪除",
 
         "Snake": "貪食蛇",
         "Score": "得分",

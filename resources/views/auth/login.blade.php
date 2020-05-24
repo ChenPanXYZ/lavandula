@@ -14,7 +14,10 @@ $languageUrls = $language->getLanguageUrls();
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="alternate" href="<?php echo $languageUrls[1]; ?>" hreflang="zh-cn" />
 	<link rel="alternate" href="<?php echo $languageUrls[2]; ?>" hreflang="zh-tw" />
-	<?php loadCssAndScript(); ?>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/admin.css">
+	<script src="/js/admin.js"></script>
 </head>
 <style>
     .flag {
@@ -145,16 +148,10 @@ $languageUrls = $language->getLanguageUrls();
                             </form>
     </div>    
     <footer id = "footer">
-<div id = "copyright">
+    <div id = "copyright">
 		Copyright &copy; 2016 - <?php echo date("Y");?> Pan <img id = 'footer-logo' src='/android-chrome-192x192.png' alt = 'My Photo'/> Chen. All Rights Reserved.
 	</div>
-
-	<div id = "acknowledgements">
-		
-		<div id = 'vultr'><a href = 'https://www.vultr.com/?ref=7470831' target='_blank' aria-label='Vultr' rel='noopener'><img id = 'vultr-logo' src='uploads/vultr.png' alt = 'Vultr Logo'/>&nbsp;<?php echo _("Web Hosting by Vultr"); ?></a></div>
-		&vert;
-		<div id = 'cloudflare'><a href = 'https://www.cloudflare.com' target='_blank' aria-label='Cloudflare' rel='noopener'><img id = 'cloudflare-logo' src='uploads/cloudflare.png' alt = 'Cloudflare Logo'/>&nbsp;<?php echo _("CDN by Cloudflare"); ?></a></div>
-	</div>
+    @yield('acknowledgements', View::make('shared-components/acknowledgements'))
     </footer>
 </body>
 </html>

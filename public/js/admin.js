@@ -275,17 +275,38 @@ function expand_collapse(el, button) {
 
 
 
-$(document).on('click', '.approve-button', function (event) {
+$(document).on('click', "#show-unapproved-comments", function (event) {
 	event.preventDefault();
+	document.getElementById("unapproved-comments").style.display = "block";
+	document.getElementById("approved-comments").style.display = "none";
+	document.getElementById("approve-button").style.display = "inline-block";
+	document.getElementById("unapprove-button").style.display = "none";
+	document.getElementById("show-unapproved-comments").style.backgroundColor = "#4D5139";
+	document.getElementById("show-approved-comments").style.backgroundColor = "#6c757d";
 });
 
-$(document).on('click', '.unapprove-button', function (event) {
+$(document).on('click', "#show-approved-comments", function (event) {
 	event.preventDefault();
+	document.getElementById("unapproved-comments").style.display = "none";
+	document.getElementById("approved-comments").style.display = "block";
+	document.getElementById("approve-button").style.display = "none";
+	document.getElementById("unapprove-button").style.display = "inline-block";
+	document.getElementById("show-unapproved-comments").style.backgroundColor = "#6c757d";
+	document.getElementById("show-approved-comments").style.backgroundColor = "#4D5139";
 });
 
-$(document).on('click', '.delete-button', function (event) {
-	event.preventDefault();
-});
+
+$(document).on('click', '.comment', function(event) {
+	let checkbox = this.querySelector(".comment-checkbox");
+	if(checkbox.checked) {
+		checkbox.checked = false;
+		this.style.borderColor = "rgba(0, 0, 0, 0.125)";
+	}
+	else {
+		checkbox.checked = true;
+		this.style.borderColor = "#4D5139";
+	}
+})
 
 
 
@@ -309,6 +330,7 @@ function update_comments(type) {
 			url:'/api/comment',
 			data: {comments: comments, status: 't', api_token: api_token},
 			success: function(html){
+				location.reload();
 			}
 		});	
 	}
@@ -318,6 +340,7 @@ function update_comments(type) {
 			url:'/api/comment',
 			data: {comments: comments, status: 'f', api_token: api_token},
 			success: function(html){
+				location.reload();
 			}
 		});	
 	}
@@ -327,6 +350,7 @@ function update_comments(type) {
 			url:'/api/comment',
 			data: {comments: comments, api_token: api_token},
 			success: function(html){
+				location.reload();
 			}
 		});	
 	}

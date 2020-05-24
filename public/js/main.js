@@ -160,11 +160,13 @@ let stateCheck = setInterval(() => {
 
 
     if($('.guestbook-form').length !== 0) {
-      let head = document.getElementsByTagName('head')[0];
-      let script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.src = "https://www.recaptcha.net/recaptcha/api.js?onload=onloadCallback&render=explicit";
-      head.appendChild(script);
+      setTimeout(function(){
+        let head = document.getElementsByTagName('head')[0];
+        let script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = "https://www.recaptcha.net/recaptcha/api.js?onload=onloadCallback&render=explicit";
+        head.appendChild(script);
+      }, 2000);
   }
 
 
@@ -209,9 +211,11 @@ function sendComment(recaptchaResponse) {
           alert("You Are a Bot, Go Away!")
         }
         else {
+          $("#comment-author-name").text(name);
           $('#guestbook-form-body').slideUp();
 
-          $("#guestbook-form-body").after($.parseHTML(html));
+          document.getElementById("comment-form-reminder").style.display = "none";
+          document.getElementById("thankyou").style.display = "block";
         }
 
       }

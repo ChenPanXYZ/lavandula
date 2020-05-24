@@ -331,3 +331,27 @@ button.seen_cookie{
 {
 	display: block;
 }
+
+#switch-buttons {
+	text-align: center;
+}
+
+#approved-comments {
+	display: none;
+}
+
+#show-unapproved-comments {
+	background-color: #4D5139;
+}
+
+#unapprove-button {
+	display: none;
+}
+
+.comment {
+	margin: 15px;
+}
+
+.comment-checkbox {
+	visibility: hidden;
+}

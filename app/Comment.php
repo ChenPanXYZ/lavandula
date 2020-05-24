@@ -74,4 +74,19 @@ class Comment extends Model
             ->update(['comment_approved' => $status]);
         }
     }
+
+
+    public static function getProvedByTime() {
+        $comments = Comment::where('comment_approved', 't')
+        ->orderBy('comment_id', 'desc')
+        ->get();
+        return $comments;
+    }
+
+    public static function getUnprovedByTime() {
+        $comments = Comment::where('comment_approved', 'f')
+        ->orderBy('comment_id', 'desc')
+        ->get();
+        return $comments;
+    }
 }

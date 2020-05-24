@@ -3,12 +3,7 @@
 		Copyright &copy; 2016 - <?php echo date("Y");?> Pan <img id = 'footer-logo' src='/android-chrome-192x192.png' alt = 'My Photo'/> Chen. All Rights Reserved.
 	</div>
 
-	<div id = "acknowledgements">
-		
-		<div id = 'idc'><a href = 'https://www.hetzner.com' target='_blank' aria-label='Hetzner' rel='noopener'><img id = 'idc-logo' src='/uploads/hetzner.png' alt = 'Hetzner Logo'/>&nbsp;<?php echo __("Web Hosting by Hetzner"); ?></a></div>
-		&vert;
-		<div id = 'cloudflare'><a href = 'https://www.cloudflare.com' target='_blank' aria-label='Cloudflare' rel='noopener'><img id = 'cloudflare-logo' src='/uploads/cloudflare.png' alt = 'Cloudflare Logo'/>&nbsp;<?php echo __("CDN by Cloudflare"); ?></a></div>
-	</div>
+	@yield('acknowledgements', View::make('shared-components/acknowledgements'))
 
 	<div id = "visitorNumber"">
 		<strong><?php echo $visitorNumber;?></strong> <?php echo __('people have visited my website!')?>
@@ -37,4 +32,3 @@
 
 	gtag('config', 'UA-101895586-2');
 </script>
-<?php loadFonts(); ?>
