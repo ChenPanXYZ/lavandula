@@ -23,5 +23,4 @@
             @php print_r('<link href="/fonts/pan-sans/stylesheet.css" rel="stylesheet">'); @endphp
         @endif
     </head>
-
-    <div id = "loading"></div>
+    @yield('loading', View::make('shared-components/loading'))
