@@ -93,9 +93,7 @@
 	</div>
 	
 	<footer id = "footer">
-		<div id = "copyright">
-			Copyright &copy; 2016 - <?php echo date("Y");?> Pan <img id = 'footer-logo' src='/android-chrome-192x192.png' alt = 'My Photo'/> Chen. All Rights Reserved.
-		</div>
+		@yield('copyright', View::make('shared-components/copyright'))
 		@yield('acknowledgements', View::make('shared-components/acknowledgements'))
 	</footer>
 

@@ -87,71 +87,95 @@ $languageUrls = $language->getLanguageUrls();
 </style>
 <body>
     <div class="mainContent">
-        <h2><?php echo _('Login');?></h2>
-        <p><?php echo _('Welcome Back! Pan Chen.');?></p>
-                            <form method="POST" action="{{ route('login') }}">
-                                @csrf
+        <h2 id = "login-page-title"><?php echo _('Login');?></h2>
 
-                                <div class="form-group row">
-                                    <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+<style>
+form {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-                                    <div class="col-md-6">
-                                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #ccc;
+  border-radius: .1875rem;
+  box-sizing: border-box;
+  display: block;
+  font-size: .875rem;
+  margin-bottom: 1rem;
+  padding: .275rem;
+  width: 100%;
+}
 
-                                        @error('email')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                </div>
+input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+     -moz-appearance: checkbox;
+          appearance: checkbox;
+  display: inline-block;
+  width: auto;
+}
 
-                                <div class="form-group row">
-                                    <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+input[type="password"] {
+  margin-bottom: .5rem;
+}
 
-                                    <div class="col-md-6">
-                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+input[type="submit"] {
+  background-color: #4D5139;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+}
 
-                                        @error('password')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                </div>
+label {
+  color: #666;
+  font-size: .875rem;
+}
+#login-page-title {
+    text-align: center;
+}
+</style>
 
-                                <div class="form-group row">
-                                    <div class="col-md-6 offset-md-4">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                                            <label class="form-check-label" for="remember">
-                                                {{ __('Remember Me') }}
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
 
-                                <div class="form-group row mb-0">
-                                    <div class="col-md-8 offset-md-4">
-                                        <button type="submit" class="btn btn-primary">
-                                            {{ __('Login') }}
-                                        </button>
+                    <label for="email">{{ __('E-Mail Address') }}</label>
 
-                                        @if (Route::has('password.request'))
-                                            <a class="btn btn-link" href="{{ route('password.request') }}">
-                                                {{ __('Forgot Your Password?') }}
-                                            </a>
-                                        @endif
-                                    </div>
-                                </div>
-                            </form>
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+
+                        @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+    
+
+                    <label for="password">{{ __('Password') }}</label>
+
+                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                        @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+
+                            <input class="dashboard-checkbox" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                            <label class="form-check-label" for="remember">
+                                {{ __('Remember Me') }}
+                            </label>
+
+                    <input type="submit" value={{ __("Login") }}>
+            </form>
     </div>    
     <footer id = "footer">
-    <div id = "copyright">
-		Copyright &copy; 2016 - <?php echo date("Y");?> Pan <img id = 'footer-logo' src='/android-chrome-192x192.png' alt = 'My Photo'/> Chen. All Rights Reserved.
-	</div>
-    @yield('acknowledgements', View::make('shared-components/acknowledgements'))
+        @yield('copyright', View::make('shared-components/copyright'))
+        @yield('acknowledgements', View::make('shared-components/acknowledgements'))
     </footer>
 </body>
 </html>

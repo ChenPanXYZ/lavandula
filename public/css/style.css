@@ -13,6 +13,17 @@ Chapter 3 Main Content
 Chapter 4 Footer
 Screen Size >= 785px
 */
+
+:root {
+  --header-text-color: #dcb879;
+  --main-text-color: #192236;
+  --background-color: #fffffb;
+  --secondary-background-color: #268785;
+  --selection-color: #bdc0ba;
+  --secondary-text-color: #656765;
+  --default-text-font-family: Calibri, -apple-system, Arial, sans-serif;
+}
+
 body:lang(zh-TW), h1:lang(zh-TW), h2:lang(zh-TW), h3:lang(zh-TW), h4:lang(zh-TW) {
   font-family: Helvetica, Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", sans-serif;
 }
@@ -31,7 +42,7 @@ body:lang(en), button:lang(en), #name>h1:lang(en) {
   font-family: 'Pan Sans', serif;
 }
 h1:lang(en), h2:lang(en), h3:lang(en), h4:lang(en) {
-  font-family: Calibri, -apple-system, Arial, sans-serif;
+  font-family: var(--default-text-font-family);
 }
 
 body {
@@ -44,8 +55,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: #fffffb;
-    color: #192236;
+    background-color: var(--background-color);
+    color: var(--main-text-color);
     overflow-y: hidden;
 }
 
@@ -55,12 +66,12 @@ a {
 
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
-  color: #192236;
+  color: var(--main-text-color);
 }
 
 ::selection {
-  background: #bdc0ba;
-  color: #656765;
+  background: var(--selection-color);
+  color: var(--secondary-text-color);
 }
 
 ::-webkit-scrollbar {
@@ -97,14 +108,14 @@ button::-moz-focus-inner {
 .popup-reminder button, .guestbook-form button, button.seen_cookie, input[name=submit], .more-guest-comment a {
   display: inline-block;
   border: none;
-  background: #656765;
-  color: #ffffff !important;
+  background: var(--secondary-text-color);
+  color: var(--background-color) !important;
   font-weight: 100;
   padding: 9px;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 6px;
-  font-family: Calibri, -apple-system, Arial, sans-serif;
+  font-family: var(--default-text-font-family);
 }
 
 /*The Table*/
@@ -134,7 +145,7 @@ ul {
   left: 0;
   right: 0;
   vertical-align: middle;
-  color: #dcb879;
+  color: var(--header-text-color);
 }
 
 .signature {
@@ -204,10 +215,10 @@ ul {
   background-size: cover;
   width: 100%;
   height: 436px;
-  color: #DCB879;
+  color: var(--header-text-color);
 }
 #header a {
-    color: #DCB879;
+    color: var(--header-text-color);
 }
 
 #header a:hover {
@@ -226,7 +237,7 @@ ul {
   display:block;
   margin-top: 15px;
   font-size: 0px;
-    text-align: center;
+  text-align: center;
 }
 
 #contact a {
@@ -268,6 +279,20 @@ ul {
 
 
 /*Projects*/
+.project {
+  display: none;
+}
+
+#previous-page-button,
+#next-page-button {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+#next-page-button {
+  float: right;
+}
+
 .collapsible-table-row-head {
   background-color: #fcfaf2;
   cursor: pointer;
@@ -279,11 +304,11 @@ ul {
   transition: 0.4s;
   text-transform: none;
   font-size: 22px;
-  color: #192236;
+  color: var(--main-text-color);
 }
 
 .collapsible-table-row:not(:last-child) {
-  border-bottom: solid 1px #bdc0ba;
+  border-bottom: solid 1px var(--selection-color);
 }
 
 .collapsible-table-row-content {
@@ -320,7 +345,7 @@ ul {
 .guestbook-form{
   font: 12px Arial, Helvetica, sans-serif;
   padding: 16px;
-  background: #fffffb;
+  background: var(--background-color);
 }
 
 .guestbook-form input[type="text"],
@@ -332,11 +357,11 @@ ul {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   width: 100%;
-  background: #fffffb;
+  background: var(--background-color);
   margin-bottom: 4%;
-  border: 1px solid #bdc0ba;
+  border: 1px solid var(--selection-color);
   padding: 3%;
-  color: #656765;
+  color: var(--secondary-text-color);
   width: 100%;
   font-size: 12px;
 }
@@ -361,7 +386,7 @@ ul {
   display: inline-block;
   padding: 15px;
   margin-bottom: 15px;
-  font-family: Calibri, -apple-system, Arial, sans-serif;
+  font-family: var(--default-text-font-family);
 }
 
 .guest-comment-content {
@@ -378,9 +403,6 @@ ul {
   padding-top: 0;
   margin-bottom: 15px;
 }
-
-
-
 
 /*Footer*/
 #footer {
@@ -412,7 +434,7 @@ ul {
 }
 
 #footer {
-  font-family: Calibri, -apple-system, Arial, sans-serif;
+  font-family: var(--default-text-font-family);
 }
 
 /*Popup Reminder*/
@@ -431,7 +453,7 @@ ul {
 }
 
 .popup-reminder a {
-  color: #dcb879;
+  color: var(--header-text-color);
   text-decoration: none;
 }
 
@@ -439,25 +461,11 @@ ul {
   bottom: 0;
 }
 
-
-.seen_cookie a{
-  background-color: #F1D600;
-  color: #192236;
-  border-radius: 5px;
-  padding: 0 20px;
-  cursor: pointer;
-  float: right;
-  margin: 0 60px 0 10px;
-}
-.seen_cookie a:hover {
-  background-color: #E0C91F;
-}
-
 .seen_cookie {
   display: block;
   margin: auto auto;
   width: 90%;
-  background-color: #dcb879;
+  background-color: var(--header-text-color);
   font-family: inherit;
 }
 
@@ -509,10 +517,10 @@ ul {
 
 /* Modal Content */
 .modal-content {
-  background-color: #fcfaf2;
+  background-color: var(--background-color);
   margin: auto;
   padding: 20px;
-  border: 1px solid #bdc0ba;
+  border: 1px solid var(--selection-color);
   width: 60%;
   z-index: 1000;
 }
@@ -538,9 +546,9 @@ ul {
 
 
 #modal-content>a,  #modal-content>button{
-  background-color: #268785;
+  background-color: var(--secondary-background-color);
   border: none;
-  color: #ffffff;
+  color: var(--background-color);
   padding: 15px 5px;
   text-align: center;
   text-decoration: none;
@@ -550,49 +558,25 @@ ul {
   cursor: pointer;
   width: 60%;
   /* height: 50px; */
-  font-family: Calibri, -apple-system, Arial, sans-serif;
+  font-family: var(--default-text-font-family);
   height: 22px;
 }
 
 #modal-content>a:hover {
-  color: #ffffff;
+  color: var(--background-color);
 }
 
 #language-switcher {
-  color: #ffffff;
-}
-
-
-#globe {
-  max-width: 100%;
-}
-
-.g-recaptcha {
-  transform:scale(0.92);
-  transform-origin:0 0;
+  color: var(--background-color);
 }
 
 .asterisk {
-  color: #dcb879;
+  color: var(--header-text-color);
 }
 
 .icon-like,
 .icon-dislike {
   color: #0D5661;
-}
-
-.project {
-  display: none;
-}
-
-#previous-page-button,
-#next-page-button {
-  display: inline-block;
-  margin-bottom: 15px;
-}
-
-#next-page-button {
-  float: right;
 }
 
 #thankyou {

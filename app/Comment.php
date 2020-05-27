@@ -46,13 +46,13 @@ class Comment extends Model
     
     
             if($comment) {
+                $content = nl2br($content);
+                $to = 'pan@panchen.xyz';
+                $subject = $name . ' leaves a message!';
+                $message = $name . " leaves a message: \n" . $content;
+                mail($to, $subject, $message);
                 return 200;
             }
-            $content = nl2br($content);
-            $to = 'pan@panchen.xyz';
-            $subject = $name . ' leaves a message!';
-            $message = $name . " leaves a message: \n" . $content;
-            mail($to, $subject, $message);
         }
         else {
             return -1;
