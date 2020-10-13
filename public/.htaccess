@@ -26,16 +26,6 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 
-
-# One year for image files
-<filesMatch ".(jpg|jpeg|png|gif|ico|eot|woff2|woff|ttf|svg|webp)$">
-Header set Cache-Control "max-age=31536000, public"
-</filesMatch>
-# One month for css and js
-<filesMatch ".(css|js)$">
-Header set Cache-Control "max-age=31536000, public"
-</filesMatch>
-
 RedirectMatch 301 ^/facebook$ https://www.facebook.com/ChenPanXYZ
 RedirectMatch 301 ^/instagram$ https://www.instagram.com/ChenPanXYZ
 RedirectMatch 301 ^/twitter$ https://www.twitter.com/ChenPanXYZ
@@ -48,8 +38,5 @@ RedirectMatch 301 ^/github/website$ https://github.com/ChenPanXYZ/lavandula
 Redirect permanent /github http://www.github.com/chenpanxyz
 RewriteBase /
 Redirect permanent /blog https://blog.chenpan.xyz/
-
-ModPagespeedEnableFilters convert_to_webp_lossless
-Modpagespeed on
 
 </IfModule>

@@ -48,6 +48,26 @@ class PublicPageController extends Controller
         }
     }
 
+
+    public function showHistory()
+    {
+        $language = new Language();
+        $visitorNumber = Counter::getData('visitor');
+        $likeNumber = Counter::getData('like');
+        $dislikeNumber = Counter::getData('dislike');
+        $feedback = $language->init($visitorNumber);
+
+        $feedback = $language->init($visitorNumber);
+
+        $comments = Comment::getProvedByTime();
+        if(!($feedback === 0)) {
+            return redirect($feedback);
+        }
+        else {
+            return view('history-components/history', ["languageCode" => $language->getLanguageCode(), "domain"=>$language->getDomain(), "languageUrls" => $language->getLanguageUrls(), "likeNumber" => $likeNumber, "dislikeNumber" => $dislikeNumber, "visitorNumber" => $visitorNumber, "comments" =>$comments, "commentsNumber" => -1]);
+        }
+    }
+
     public function showResume()
     {
         $language = new Language();

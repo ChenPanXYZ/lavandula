@@ -28,6 +28,9 @@
         "Besides, I own a wide range of interests, from music, movies to history, politics and so on. During my spare time, I work on my debut novel – Three Years in FZYZ, a book based on my real high school life.": "除此之外，我有著廣泛的興趣，從音樂、電影到歷史、政治等等。閒暇之時，我會創作我的第一本小說，一本基於我真實高中生活的小說。",
 
     "My Projects": "我的專案",
+
+    "My Skills": "我的技能",
+        "MORE": "檢視更多",
     "My Footprints": "我的足跡",
         "I love travelling. It makes me realize how diverse our world is and the importance of thinking in a more comprehensive way.": "我喜歡旅行。旅行讓我明白了我們的世界是多麼的多元化以及多元思考的重要性。",
 
@@ -95,7 +98,7 @@
 
             "Minor: <a href = \"https://www.statistics.utoronto.ca/\">Statistics Science</a>, <a href = \"https://www.eas.utoronto.ca/\">Eastern Asian Studies</a>": "輔修：<a href = \"https://www.statistics.utoronto.ca/\">統計科學</a>, <a href = \"https://www.eas.utoronto.ca/\">東亞學</a>",
 
-            "Computer Science related courses: Introduction to Computer Science, Mathematical Expression and Reasoning for Computer Science, Software Design, Linear Algebra II, Probability with Computer Applications, Introduction to Language, Introduction to the Theory of Computation, Software Tools and Systems Programming, Data Structures and Analysis, The Design of Interactive Computational Media, Introduction to Databases, Introduction to Software Engineering, Programming on the Web, Introduction to Combinatorics": "計算機科學相關課程：計算機科學導論，計算機科學的數學表達與邏輯推理，軟體設計，線性代數2，計算機概率應用，語言學導論，計算原理導論，工具軟體與系統程式設計，資料結構與分析，交互式計算機媒體設計，資料庫導論，軟體工程導論，網路應用開發，組合學導論",
+            "Computer Science related courses: Introduction to Computer Science, Mathematical Expression and Reasoning for Computer Science, Software Design, Linear Algebra II, Probability with Computer Applications, Introduction to Language, Introduction to the Theory of Computation, Software Tools and Systems Programming, Data Structures and Analysis, The Design of Interactive Computational Media, Introduction to Databases, Introduction to Software Engineering, Programming on the Web, Introduction to Combinatorics, Algorithm Design, Analysis & Complexity, Operating Systems": "計算機科學相關課程：計算機科學導論，計算機科學的數學表達與邏輯推理，軟體設計，線性代數2，計算機概率應用，語言學導論，計算原理導論，工具軟體與系統程式設計，資料結構與分析，交互式計算機媒體設計，資料庫導論，軟體工程導論，網路應用開發，組合學導論，演算法設計、分析與複雜度，作業系統",
 
         "Bachelor of Engineering (unfinished) | Northeastern University | September 2017 – July 2018": "工學士（未完成） | 東北大學 | 2017年9月 - 2018年7月",
 
@@ -107,8 +110,16 @@
             "Data Science Professional by IBM": "由IBM提供的資料科學專業課程",
             "Web Applications for Everybody by University of Michigan": "由密歇根大學提供的網路應用開發課程",
 
+    "Experience": "工作經歷",
+    "Quality Assurance | Infrastructures for Information | June 2020 - August 2020": "品質保證人員 | Infrastructures for Information | 2020年6月 - 2020年8月",
+    "Software Developer | Infrastructures for Information | August 2020 - August 2021": "軟體開發人員 | Infrastructures for Information | 2020年6月 - 2021年8月",
+        "Infrastructures for Information is an independent software company specializing in the delivery of XML / SGML document processing software in Toronto, Ontario, Canada, founded by Michel Vulpe in 1993." : "Infrastructures for Information是一家由Michel Vulpe先生於1993年成立，位於加拿大安大略省多倫多市，專注於XML / SGML傳輸的獨立軟體公司。", 
+
+    "Webmaster & Editor | Chen's Notes | Novermber 2016 - Present": "站長兼總編輯 | 小陳筆記 | 2016年11日 - 今",
+        "Chen's Notes is a Chinese website that currently has a server in Republic of Singapore. The main topic is Tech News, Internet, Free Resources, Tutorials, and Reviews on Online Products.": "小陳筆記是一個中文網站，目前的服務器位於新加坡共和國。小陳筆記的主要話題是科技新聞、互聯網新知、免費資源、實用教學、以及網路產品之評測。",
+
     "Skills": "技能",
-        "Languages": "程式語言",
+        "Programming Languages": "程式語言",
         "Frameworks/Libraries": "框架/函式庫",
         "Techniques": "技術",
         "Tools": "工具",
@@ -183,5 +194,9 @@
         "The AI module is on the way": "AI模組正在趕來的路上",
         "Start": "開玩",
         "GAMEOVER": "撞墻了",
-        "Try Again!": "再試一次！"
+        "Try Again!": "再試一次！",
+"History - Pan Chen": "本站歷史 - 陳攀",
+"<a href = \"/blog\" aria-label=\"Blog\" onclick=\"header.adjust()\" rel=\"noopener\">Blog</a>": "<a href = \"https://www.chen.life\" aria-label=\"網誌\" onclick=\"header.adjust()\" rel=\"noopener\">網誌</a>",
+"<a data-toggle=\"tooltip\" title=\"Blog\" href=\"/blog\" aria-label=\"My Blog\" target=\"_self\" rel=\"noopener\"><i class=\"iconfont icon-book\"></i></a>": "<a data-toggle=\"tooltip\" title=\"網誌\" href=\"https://www.chen.life\" aria-label=\"我的網誌\" target=\"_self\" rel=\"noopener\"><i class=\"iconfont icon-book\"></i></a>",
+"Languages": "語言"
 }

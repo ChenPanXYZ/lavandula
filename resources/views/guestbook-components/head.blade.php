@@ -20,7 +20,7 @@
         <meta name="msapplication-TileColor" content="#268785">
         <meta name="theme-color" content="#268785">
         @if($languageCode == "en")
-            @php print_r('<link href="/fonts/pan-sans/stylesheet.css" rel="stylesheet">'); @endphp
+            <link href="/fonts/pan-sans/stylesheet.css" rel="stylesheet">
         @endif
     </head>
     @yield('loading', View::make('shared-components/loading'))

@@ -12,8 +12,6 @@
 		</div>
     </footer>
 </div>
-
-
 <link rel="stylesheet" href="/css/style.css" defer>
 <link rel="stylesheet" media="screen and (min-width: 785px)" href="/css/responsive.css" defer>
 <script type="text/javascript" src="/js/functions.js" async></script>

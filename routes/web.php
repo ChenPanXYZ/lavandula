@@ -19,6 +19,8 @@ Route::get('/guestbook', 'PublicPageController@showGuestbook');
 
 Route::get('/resume', 'PublicPageController@showResume');
 
+Route::get('/history', 'PublicPageController@showHistory');
+
 // Route::get('/welcome', function () {
 //     return view('welcome');
 // });

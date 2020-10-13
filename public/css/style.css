@@ -38,7 +38,7 @@ body:lang(zh-CN), h1:lang(zh-CN), h2:lang(zh-CN), h3:lang(zh-CN), h4:lang(zh-CN)
   letter-spacing:22px;
 }
 
-body:lang(en), button:lang(en), #name>h1:lang(en) {
+body:lang(en), button:lang(en), #name:lang(en) {
   font-family: 'Pan Sans', serif;
 }
 h1:lang(en), h2:lang(en), h3:lang(en), h4:lang(en) {
@@ -214,7 +214,7 @@ ul {
   background-position:center center;
   background-size: cover;
   width: 100%;
-  height: 436px;
+  height: 100vh;
   color: var(--header-text-color);
 }
 #header a {
@@ -228,8 +228,7 @@ ul {
 #name {
   display:block;
   margin-bottom: 37px;
-  margin-top: 75px;
-  font-size: 25px;
+  font-size: 3em;
   text-align: center;
 }
 
@@ -294,7 +293,7 @@ ul {
 }
 
 .collapsible-table-row-head {
-  background-color: #fcfaf2;
+  background-color: #fffffb;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -581,4 +580,16 @@ ul {
 
 #thankyou {
   display: none;
+}
+
+div#info {
+  /* width: 100px; */
+  height: 100px;
+  /* background-color: red; */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }

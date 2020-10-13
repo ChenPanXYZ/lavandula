@@ -26,7 +26,7 @@
         <link rel="stylesheet" href="/css/404game.css" defer>
         <script type="text/javascript" src="/js/404game.js"></script>
         @if($languageCode == "en")
-            @php print_r('<link href="/fonts/pan-sans/stylesheet.css" rel="stylesheet">'); @endphp
+            <link href="/fonts/pan-sans/stylesheet.css" rel="stylesheet">
         @endif
     </head>
     @yield('loading', View::make('shared-components/loading'))

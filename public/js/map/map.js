@@ -75,8 +75,15 @@ $('#world-map-markers').vectorMap({
          "fill-opacity": 1
      }
  },
- onRegionTipShow: function (e, el, code) {
-     e.preventDefault();
+ onRegionTipShow: function (e, label, code) {
+  let names = {
+    "en": { "TW": "Taiwan, Republic of China", "CN": "People's Republic of China"},
+    "zh-CN": { "TW": "中国台湾", "CN": "中国"},
+    "zh-TW": { "TW": "中華民國", "CN": "中國大陸"},
+  }
+
+  label.html(names[document.documentElement.lang][code]);
+     // e.preventDefault();
  },
   markerStyle: {
     initial: {

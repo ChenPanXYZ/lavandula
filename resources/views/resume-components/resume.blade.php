@@ -47,7 +47,6 @@
 	<h1 class = "title"><a href = "/"><?php echo __("Pan Chen"); ?></a></h1>
 	<div class = "contact-info">
 		<ul>
-			<div class = "phone_number"><li><span class="iconfont icon-phone"></span> <a href = "tel:6476861520">647-686-1520</a></li></div>
 			<li><span class="iconfont icon-email"></span> <a href = "mailto:pan.chen@mail.utoronto.ca">pan.chen@mail.utoronto.ca</a></li>
 			<li><span class="iconfont icon-book"></span> <a href = "/">{{$domain}}</a></li>
 			<li><span class="iconfont icon-linkedin"></span> <a href = "/linkedin">{{$domain}}/linkedin</a></li>
@@ -83,7 +82,7 @@ foreach ($resume as $resume_section_id => $resume_section) {
 								for ($i = 0; $i < $resume_item_content_num; $i++) {
 									?>
 									<?php if ($resume_item_content[$i][0] == 96 || $resume_item_content[$i][0] == 95) {
-										if($_SERVER['HTTP_HOST'] == "www.panchen.xyz" || $_SERVER['HTTP_HOST'] == "www.pchen.org") {?>
+										if($_SERVER['HTTP_HOST'] == "www.panchen.xyz" || $_SERVER['HTTP_HOST'] == "www.pchen.org" || $_SERVER['HTTP_HOST'] == "www.chenpan.org") {?>
 										<li><?php echo __($resume_item_content[$i][1]); ?></li>
 										<?php
 										}
@@ -117,7 +116,7 @@ foreach ($resume as $resume_section_id => $resume_section) {
 </div>
 <footer id="footer">
 <div id = "copyright">
-		Copyright &copy; 2016 - <?php echo date("Y");?> Pan <img id = 'footer-logo' src='/android-chrome-192x192.png' alt = 'My Photo'/> Chen. All Rights Reserved.
+		Copyright &copy; 2016 - <?php echo date("Y");?> Pan <img id = 'footer-logo' src='/android-chrome-20x20.png' alt = 'My Photo'/> Chen. All Rights Reserved.
 	</div>
 
 	@yield('acknowledgements', View::make('shared-components/acknowledgements'))

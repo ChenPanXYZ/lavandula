@@ -14,7 +14,7 @@
 	}
 
 	#header {
-		height: 335px;
+		height: 100vh;
 	}
 	
 	.popup-reminder a {
@@ -54,9 +54,9 @@
 	
 	#name {
 		display:block;
-		margin-top: 20px;
 		text-align: center;
-		font-size:35px;
+		font-size: 5em;
+		margin-top: 0px;
 	}
 	
 	#contact {
@@ -146,6 +146,20 @@
 		width: auto;
 		height: 16px;
 		border-radius: auto;
+	}
+
+
+
+	div#info {
+		/* width: 100px; */
+		height: 100px;
+		/* background-color: red; */
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
 	}
 	
 }

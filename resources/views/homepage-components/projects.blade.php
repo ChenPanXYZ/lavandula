@@ -1,3 +1,9 @@
+<style>
+.project:nth-child(-n+9) {
+    display: none;
+}
+</style>
+
 <section class = "main-section content" id = "projects">
 <h2><?php echo __("My Projects"); ?></h2>
 		<div class = "icon-arrow-left" id="previous-page-button"></div>
