@@ -21,42 +21,44 @@ class Comment extends Model
     public $timestamps = false;
 
     public static function add(Request $request) {
-        $name = $request->name;
-        $email = $request->email;
-        $content = $request->content;
-        $recaptchaResponse = $request->recaptchaResponse;
+        return 200;
+        // $name = $request->name;
+        // $email = $request->email;
+        // $content = $request->content;
+        // $recaptchaResponse = $request->recaptchaResponse;
+        
+        // $secretKey = "6Le3GbwUAAAAAFM3PJKOa6HtlzcbGkEHMCGRmK18";
+        // // post request to server
+        // $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($recaptchaResponse);
+        // $response = file_get_contents($url);
+        // $responseKeys = json_decode($response,true);
         
         
-        $secretKey = "6Le3GbwUAAAAAFM3PJKOa6HtlzcbGkEHMCGRmK18";
-        // post request to server
-        $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($recaptchaResponse);
-        $response = file_get_contents($url);
-        $responseKeys = json_decode($response,true);
-        
-        
-        if($responseKeys["success"]) {
-            $comment = new Comment();
-            $comment->comment_author = $name;
-            $comment->comment_email = $email;
-            $comment->comment_content = $content;
-            $comment->comment_date = DB::raw('CURRENT_TIMESTAMP');
-            $comment->comment_date_gmt = DB::raw('UTC_TIMESTAMP');
+        // if($responseKeys["success"]) {
 
-            $comment->save();
+        //     $comment = new Comment();
+        //     $comment->comment_author = $name;
+        //     $comment->comment_email = $email;
+        //     $comment->comment_content = $content;
+        //     $comment->comment_date = DB::raw('CURRENT_TIMESTAMP');
+        //     $comment->comment_date_gmt = DB::raw('UTC_TIMESTAMP');
+
+        //     $comment->save();
     
     
-            if($comment) {
-                $content = nl2br($content);
-                $to = 'pan@panchen.xyz';
-                $subject = $name . ' leaves a message!';
-                $message = $name . " leaves a message: \n" . $content;
-                mail($to, $subject, $message);
-                return 200;
-            }
-        }
-        else {
-            return -1;
-        }
+        //     if($comment) {
+        //         $content = nl2br($content);
+        //         $to = 'pan@panchen.xyz';
+        //         $subject = $name . ' leaves a message!';
+        //         $message = $name . " leaves a message: \n" . $content;
+        //         mail($to, $subject, $message);
+        //         return 200;
+        //     }
+        //     return 200;
+        // }
+        // else {
+        //     return -1;
+        // }
     }
     public static function remove(Request $request) {
         if($request->has('comments')) 

@@ -5,26 +5,34 @@ RewriteEngine On
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# One year for image files
+<filesMatch ".(jpg|jpeg|png|gif|ico|eot|woff2|woff|ttf|svg|js|webp)$">
+Header set Cache-Control "max-age=31536000, public"
+</filesMatch>
+# One month for css and js
+<filesMatch ".(css|js)$">
+Header set Cache-Control "max-age=31536000, public"
+</filesMatch>
 
-    <IfModule mod_negotiation.c>
-        Options -MultiViews -Indexes
-    </IfModule>
+<IfModule mod_negotiation.c>
+    Options -MultiViews -Indexes
+</IfModule>
 
-    RewriteEngine On
+RewriteEngine On
 
-    # Handle Authorization Header
-    RewriteCond %{HTTP:Authorization} .
-    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+# Handle Authorization Header
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-    # Redirect Trailing Slashes If Not A Folder...
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_URI} (.+)/$
-    RewriteRule ^ %1 [L,R=301]
+# Redirect Trailing Slashes If Not A Folder...
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [L,R=301]
 
-    # Send Requests To Front Controller...
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.php [L]
+# Send Requests To Front Controller...
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
 
 RedirectMatch 301 ^/facebook$ https://www.facebook.com/ChenPanXYZ
 RedirectMatch 301 ^/instagram$ https://www.instagram.com/ChenPanXYZ

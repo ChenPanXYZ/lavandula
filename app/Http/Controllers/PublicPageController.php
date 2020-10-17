@@ -20,7 +20,18 @@ class PublicPageController extends Controller
         $dislikeNumber = Counter::getData('dislike');
         $feedback = $language->init($visitorNumber);
 
-        $comments = Comment::getProvedByTime();
+        $opts = array(
+            'http'=>array(
+              'method'=>"GET"
+            )
+          );
+          
+          $context = stream_context_create($opts);
+          
+          // Open the file using the HTTP headers set above
+          $comments = json_decode(file_get_contents('https://www.chen.life/wp-json/wp/v2/comments/?post=231&parent=0', false, $context));
+
+        //$comments = Comment::getProvedByTime();
         if(!($feedback === 0)) {
             return redirect($feedback);
         }

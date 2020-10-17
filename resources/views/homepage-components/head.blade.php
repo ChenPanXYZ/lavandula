@@ -28,7 +28,8 @@
         <meta name="msapplication-TileColor" content="#268785">
         <meta name="theme-color" content="#268785">
         @if($languageCode == "en")
-            <link rel="stylesheet" href="/fonts/pan-sans/stylesheet.css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="/fonts/pan-sans/stylesheet.css"></noscript>
+            <link rel="stylesheet" href="https://pansans.chenpan.org/stylesheet.css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://pansans.chenpan.org/stylesheet.css"></noscript>
+            <link rel="preload" as="font" href="https://pansans.chenpan.org/pansans-webfont.woff2" type="font/woff2" crossorigin="anonymous">
         @endif
     </head>
     @yield('loading', View::make('shared-components/loading'))

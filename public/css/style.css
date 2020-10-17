@@ -319,6 +319,15 @@ ul {
   background-color: #ccc;
 }
 
+.shown {
+  display: block;
+  transition: opacity 0.5s linear;
+  -webkit-transition: opacity 0.5s linear;
+  -moz-transition: opacity 0.5s linear;
+  -o-transition: opacity 0.5s linear;
+  -ms-transition: opacity 0.5s linear;
+}
+
 #myFootprints figure {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
@@ -488,9 +497,9 @@ ul {
   float: right;
 }
 
-#form-submit {
+/* #form-submit {
   opacity: 0.5;
-}
+} */
 #visitorNumber {
   font-size: 9.5px;
 }

@@ -1,5 +1,5 @@
 <form class = "guestbook-form" id = "guestbook-form">
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 let recaptchaResponse
       var verifyCallback = function(response) {
         recaptchaResponse = response
@@ -16,7 +16,7 @@ let recaptchaResponse
           'expired-callback': expireCallback
         });
       };
-    </script>
+    </script> -->
             <div id = "guestbook-form-body">
                 <div class="form-group">
                     <label for="form-name"><?php echo __("Name"); ?><span class="asterisk">*</span></label>
@@ -39,7 +39,7 @@ let recaptchaResponse
                     <p id = "send-comment-error-email"><?php echo __(">:/ Please provide a valid email address."); ?></p>
 
                     <div id="recaptcha"></div>
-                    <input onclick = "sendComment(recaptchaResponse)" type="submit" name="submit" class="btn btn-primary" id = "form-submit" value="<?php echo __("Submit"); ?>" disabled>
+                    <input onclick = "sendComment()" type="submit" name="submit" class="btn btn-primary" id = "form-submit" value="<?php echo __("Submit"); ?>">
                 </div>
             </div>
             <p id = "comment-form-reminder"><?php echo __("* You need to pass the anti-bot verification to give a message. If you don't see reCAPTCHA, please refresh your cache or try the incognito mode. Thank you."); ?></p>

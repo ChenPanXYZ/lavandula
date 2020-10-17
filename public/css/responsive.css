@@ -1,5 +1,5 @@
 /*For big screen*/
-@media (min-width: 785px) {
+@media (min-width: 900px) {
 	/*For some common components*/
   	p {
 		word-wrap: break-word;

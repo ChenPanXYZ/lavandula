@@ -1,5 +1,50 @@
+<section class ="main-section content" id="history">
+    <div id="hisotry-info">
+        <?php if ($languageCode == "zh-CN") {?>
+        <h3 class="has-text-align-center">主机变迁史</h3>
+        <p>以单次连续使用服务器/虚拟主机时间排列：</p>
+        <ol id="hosting-list-by-duration"></ol>
+        <p>以开始使用日期排列：</p>
+        <div id="timeline"></div>
+        <ol id="hosting-list-by-start-date"></ol>
+        <p>以服务器/虚拟主机提供商使用时间排列：</p>
+        <ol id="hosting-list-by-provider"></ol>
+        <p>以服务器/虚拟主机所在地排列：</p>
+        <div id="locationTimeline"></div>
+        <ol id="hosting-list-by-location"></ol>
+        <p id = "icp-number">中国大陆工信部备案号：闽ICP备15010588号</p>
+        <?php }
+        else if ($languageCode == "zh-TW") {?>
+            <h3 class="has-text-align-center">伺服器播遷史</h3>
+            <p>以單次連續使用伺服器/虛擬主機時間排列：</p>
+            <ol id="hosting-list-by-duration"></ol>
+            <p>以開始使用日期排列：</p>
+            <div id="timeline"></div>
+            <ol id="hosting-list-by-start-date"></ol>
+            <p>以伺服器/虛擬主機提供商使用時間排列：</p>
+            <ol id="hosting-list-by-provider"></ol>
+            <p>以伺服器/虛擬主機所在排列：</p>
+            <div id="locationTimeline"></div>
+            <ol id="hosting-list-by-location"></ol>
+        <?php }
+        else {?>
+            <h3 class="has-text-align-center">Server History</h3>
+            <p>Sorted by Single Service Time</p>
+            <ol id="hosting-list-by-duration"></ol>
+            <p>Sorted by Service Start Date</p>
+            <div id="timeline"></div>
+            <ol id="hosting-list-by-start-date"></ol>
+            <p>Sorted by Service Provider</p>
+            <ol id="hosting-list-by-provider"></ol>
+            <p>Sorted by Location</p>
+            <div id="locationTimeline"></div>
+            <ol id="hosting-list-by-location"></ol>
+        <?php }; ?>
+        
+    </div>
+</section>
+
 <script>
-let log = console.log
 let hostingListByStartDate = document.getElementById('hosting-list-by-start-date')
 let hostingListByDuration = document.getElementById('hosting-list-by-duration')
 let hostingListByProvider = document.getElementById('hosting-list-by-provider')
@@ -811,11 +856,11 @@ for(let i = 0; i < locationsByDays.length; i++) {
     display: inline-block;
     text-align: center;
 }
-#info ol{
+#hisotry-info ol{
     font-size: 18px;
 }
 @media (min-width: 785px) {
-    #info ol{
+    #hisotry-info ol{
         font-size: 20px;
     }
     .time, .locationTime {
@@ -823,48 +868,3 @@ for(let i = 0; i < locationsByDays.length; i++) {
     }
 }
 </style>
-<section class ="main-section content" id="history">
-    <div id="info">
-        <?php if ($languageCode == "zh-CN") {?>
-        <h3 class="has-text-align-center">主机变迁史</h3>
-        <p>以单次连续使用服务器/虚拟主机时间排列：</p>
-        <ol id="hosting-list-by-duration"></ol>
-        <p>以开始使用日期排列：</p>
-        <div id="timeline"></div>
-        <ol id="hosting-list-by-start-date"></ol>
-        <p>以服务器/虚拟主机提供商使用时间排列：</p>
-        <ol id="hosting-list-by-provider"></ol>
-        <p>以服务器/虚拟主机所在地排列：</p>
-        <div id="locationTimeline"></div>
-        <ol id="hosting-list-by-location"></ol>
-        <p id = "icp-number">中国大陆工信部备案号：闽ICP备15010588号</p>
-        <?php }
-        else if ($languageCode == "zh-TW") {?>
-            <h3 class="has-text-align-center">伺服器播遷史</h3>
-            <p>以單次連續使用伺服器/虛擬主機時間排列：</p>
-            <ol id="hosting-list-by-duration"></ol>
-            <p>以開始使用日期排列：</p>
-            <div id="timeline"></div>
-            <ol id="hosting-list-by-start-date"></ol>
-            <p>以伺服器/虛擬主機提供商使用時間排列：</p>
-            <ol id="hosting-list-by-provider"></ol>
-            <p>以伺服器/虛擬主機所在排列：</p>
-            <div id="locationTimeline"></div>
-            <ol id="hosting-list-by-location"></ol>
-        <?php }
-        else {?>
-            <h3 class="has-text-align-center">Server History</h3>
-            <p>Sorted by Single Service Time</p>
-            <ol id="hosting-list-by-duration"></ol>
-            <p>Sorted by Service Start Date</p>
-            <div id="timeline"></div>
-            <ol id="hosting-list-by-start-date"></ol>
-            <p>Sorted by Service Provider</p>
-            <ol id="hosting-list-by-provider"></ol>
-            <p>Sorted by Location</p>
-            <div id="locationTimeline"></div>
-            <ol id="hosting-list-by-location"></ol>
-        <?php }; ?>
-        
-    </div>
-</section>

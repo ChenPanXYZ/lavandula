@@ -1,6 +1,19 @@
 let Mobile = false, header
 let projectsPage = 1
 const projectsNumOnOnePage = 8
+
+function cp$(identifier) {
+  if(identifier.charAt(0) === '.') {
+    return document.getElementsByClassName(identifier)
+  }
+  else if(identifier.charAt(0) === '#') {
+    return document.getElementsByClassName(identifier)
+  }
+  else {
+    return undefined;
+  }
+}
+
 let stateCheck = setInterval(() => {
   if (document.readyState === 'complete') {
 	clearInterval(stateCheck);
@@ -31,102 +44,139 @@ let stateCheck = setInterval(() => {
 
 
 
-    
+    let seenCookie = document.getElementById("seen_cookie");
+    let cookieConsent = document.getElementById("cookie_consent");
     if(getCookie("cookieConsent") != 'seen') {
       setTimeout(function () {
-          $("#cookie_consent").fadeIn(200);
+        cookieConsent.style.display = "block";
+          //$("#cookie_consent").fadeIn(200);
        }, 1000);
-      $(".seen_cookie").click(function() {
-          $("#cookie_consent").fadeOut(200);
-          setCookie('cookieConsent', 'seen', mydomain, 2147483647);
-      }); 
+       seenCookie.addEventListener("click", function(event) {
+        cookieConsent.style.display = "none";
+        setCookie('cookieConsent', 'seen', mydomain, 2147483647);
+       })
+
+      // $(".seen_cookie").click(function() {
+      //     $("#cookie_consent").fadeOut(200);
+      //     setCookie('cookieConsent', 'seen', mydomain, 2147483647);
+      // }); 
+  }
+
+  let collapsibleTableRowHeads = document.getElementsByClassName("collapsible-table-row-head");
+  for(let i = 0; i < collapsibleTableRowHeads.length; i++) {
+    let collapsibleTableRowHead = collapsibleTableRowHeads[i]
+    collapsibleTableRowHead.addEventListener("click", function(e) {
+      let collapsibleTableRowContent = e.target.parentNode.children[1]
+      // collapsibleTableRowContent.classList.toggle('shown')
+      collapsibleTableRowContent.style.display = (collapsibleTableRowContent.style.display == "block")  ? "none" : "block"
+  }); 
   }
     
-  $(".collapsible-table-row-head").click(function(){
-    let temp = $(this).parent().children(".collapsible-table-row-content");
-    $(this).toggleClass("shown");
-    temp.fadeToggle();
+//   $(".collapsible-table-row-head").click(function(){
+//     let temp = $(this).parent().children(".collapsible-table-row-content");
+//     $(this).toggleClass("shown");
+//     temp.fadeToggle();
+// });
+
+
+
+let previousPageButton = document.getElementById("previous-page-button");
+if(previousPageButton) {
+previousPageButton.addEventListener("click", function(event) {
+  event.preventDefault()
+  if(projectsPage == 1) {
+    projectsPage = maxPage
+  }
+  else {
+    projectsPage -= 1
+  }
+  for(let i = 0; i < projects.length; i++) {
+    if(i>=(projectsPage * projectsNumOnOnePage - projectsNumOnOnePage) && i < (projectsPage * projectsNumOnOnePage)) {
+      projects[i].style.display = "block"
+    }
+    else {
+      projects[i].style.display = "none"
+    }
+  }
 });
+}
 
-
-  $(document).on('click', '#previous-page-button', function (event) {
-    event.preventDefault()
-    if(projectsPage == 1) {
-      projectsPage = maxPage
+let nextPageButton = document.getElementById("next-page-button");
+if(nextPageButton) {
+nextPageButton.addEventListener("click", function(event) {
+  event.preventDefault()
+  if(projectsPage == maxPage) {
+    projectsPage = 1
+  }
+  else {
+    projectsPage += 1
+  }
+  for(let i = 0; i < projects.length; i++) {
+    if(i>=(projectsPage * 8 - 8) && i < (projectsPage * 8)) {
+      projects[i].style.display = "block"
     }
     else {
-      projectsPage -= 1
+      projects[i].style.display = "none"
     }
-    for(let i = 0; i < projects.length; i++) {
-      if(i>=(projectsPage * projectsNumOnOnePage - projectsNumOnOnePage) && i < (projectsPage * projectsNumOnOnePage)) {
-        projects[i].style.display = "block"
-      }
-      else {
-        projects[i].style.display = "none"
-      }
-    }
-  })
+  }
+}); 
+}
+    header = new Header()
+    header.init()
+    header.showTopNav()
+    const clientWidth = document.body.clientWidth
 
-  $(document).on('click', '#next-page-button', function (event) {
-    event.preventDefault()
-    if(projectsPage == maxPage) {
-      projectsPage = 1
-    }
-    else {
-      projectsPage += 1
-    }
-    for(let i = 0; i < projects.length; i++) {
-      if(i>=(projectsPage * 8 - 8) && i < (projectsPage * 8)) {
-        projects[i].style.display = "block"
-      }
-      else {
-        projects[i].style.display = "none"
-      }
-
-    }
-  })
-
-    header = new Header();
-    header.init();
-    header.showTopNav();
-    Mobile = $(document).width() < 785;
+    Mobile = clientWidth < 785;
+    // Mobile = $(document).width() < 785;
     window.onscroll = function() {
         header.showTopNav();
     }
 
 
+    let formSubmit = document.getElementById("form-submit");
+    if(formSubmit) {
+      formSubmit.addEventListener("click", function(event) {
+        event.preventDefault();
+      })
+  
+      formSubmit.addEventListener("submit", function(event) {
+        event.preventDefault();
+      })
+    }
 
-            // Add Content
-            $(document).on('click', '#form-submit', function (event) {
-              event.preventDefault();
-          });
 
-          $(document).on('submit', '#form-submit', function (event) {
-            event.preventDefault();
-        });
-
-
-        if($('#myFootprints').length !== 0) {
+        if(document.getElementById("myFootprints")) {
         //setTimeout(function(){
           if(document.createStyleSheet) {
-              document.createStyleSheet('https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.4/jquery-jvectormap.min.css');
+              document.createStyleSheet('https://cdn.jsdelivr.net/npm/jvectormap@2.0.4/jquery-jvectormap.css');
           }
           else {
-              var styles = "@import url('https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.4/jquery-jvectormap.min.css');";
+              var styles = "@import url('https://cdn.jsdelivr.net/npm/jvectormap@2.0.4/jquery-jvectormap.css');";
               var newSS=document.createElement('link');
               newSS.rel='stylesheet';
               newSS.href='data:text/css,'+escape(styles);
               document.getElementsByTagName("head")[0].appendChild(newSS);
               newSS.onload= function(){
-                  load_map_1();
+                load_map_0();
               };
               }
       //}, 1000);
+      function load_map_0() {
+        var head = document.getElementsByTagName('head')[0];
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js";
+        head.appendChild(script);
+        script.onload= function(){
+                load_map_1();
+            };
+    }
+
       function load_map_1() {
           var head = document.getElementsByTagName('head')[0];
           var script = document.createElement('script');
           script.type = 'text/javascript';
-          script.src = "js/map/jquery-jvectormap-2.0.3.min.js";
+          script.src = "https://cdn.jsdelivr.net/npm/jvectormap@2.0.4/jquery-jvectormap.min.js";
           head.appendChild(script);
           script.onload= function(){
                   load_map_2();
@@ -158,16 +208,15 @@ let stateCheck = setInterval(() => {
       }
     }
 
-
-    if($('.guestbook-form').length !== 0) {
-      setTimeout(function(){
-        let head = document.getElementsByTagName('head')[0];
-        let script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = "https://www.recaptcha.net/recaptcha/api.js?onload=onloadCallback&render=explicit";
-        head.appendChild(script);
-      }, 2000);
-  }
+  //   if(document.querySelectorAll('.guestbook-form').length !== 0) {
+  //     setTimeout(function(){
+  //       let head = document.getElementsByTagName('head')[0];
+  //       let script = document.createElement('script');
+  //       script.type = 'text/javascript';
+  //       script.src = "https://www.recaptcha.net/recaptcha/api.js?onload=onloadCallback&render=explicit";
+  //       head.appendChild(script);
+  //     }, 2000);
+  // }
 
 
 
@@ -175,7 +224,35 @@ let stateCheck = setInterval(() => {
   }
 }, 100);
 
-function sendComment(recaptchaResponse) {
+
+
+let slideUp = (target, duration) => {
+  target.style.transitionProperty = 'height, margin, padding'; /* [1.1] */
+  target.style.transitionDuration = duration + 'ms'; /* [1.2] */
+  target.style.boxSizing = 'border-box'; /* [2] */
+  target.style.height = target.offsetHeight + 'px'; /* [3] */
+  target.style.height = 0; /* [4] */
+  target.style.paddingTop = 0; /* [5.1] */
+  target.style.paddingBottom = 0; /* [5.2] */
+  target.style.marginTop = 0; /* [6.1] */
+  target.style.marginBottom = 0; /* [7.2] */
+  target.style.overflow = 'hidden'; /* [7] */
+  window.setTimeout( () => {
+    target.style.display = 'none'; /* [8] */
+    target.style.removeProperty('height'); /* [9] */
+    target.style.removeProperty('padding-top');  /* [10.1] */ 
+    target.style.removeProperty('padding-bottom');  /* [10.2] */ 
+    target.style.removeProperty('margin-top');  /* [11.1] */ 
+    target.style.removeProperty('margin-bottom');  /* [11.2] */ 
+    target.style.removeProperty('overflow');  /* [12] */ 
+    target.style.removeProperty('transition-duration');  /* [13.1] */ 
+    target.style.removeProperty('transition-property');  /* [13.2] */ 
+  }, duration);
+}
+
+
+function sendComment() {
+// function sendComment(recaptchaResponse) {
   let name = document.getElementById('form-name').value;
   let email = document.getElementById('form-email').value;
   let content = document.getElementById('form-content').value;
@@ -201,24 +278,36 @@ function sendComment(recaptchaResponse) {
     return;
   }
 
-
-  $.ajax({
-      type:"POST",
-      url:'api/comment',
-      data: {name: name, email: email, content: content, recaptchaResponse: recaptchaResponse},
-      success: function(html){
-        if(html == -1) {
+  const comment = {name: name, email: email, content: content, recaptchaResponse: recaptchaResponse};
+  fetch("api/comment", {
+    method: "POST", 
+    body: JSON.stringify(comment),
+    headers: {
+      'content-type': 'application/json'
+    },
+  }).then(res => {
+        if(res == -1) {
           alert("You Are a Bot, Go Away!")
         }
         else {
-          $("#comment-author-name").text(name);
-          $('#guestbook-form-body').slideUp();
-
-          document.getElementById("comment-form-reminder").style.display = "none";
-          document.getElementById("thankyou").style.display = "block";
+          let wpComment = {post: 231, author_name: name, author_email: email, content: content}
+          fetch("https://www.chen.life/wp-json/wp/v2/comments", {
+            method: "POST", 
+            body: JSON.stringify(wpComment),
+            headers: {
+              'content-type': 'application/json'
+            },
+          }).then(res => {
+            if(res) {
+              // $('#guestbook-form-body').slideUp();
+              //slideUp(document.getElementById("guestbook-form-body"), 200000)
+              document.getElementById("guestbook-form-body").style.display = "none";
+              document.getElementById("comment-author-name").textContent = name;
+              document.getElementById("comment-form-reminder").style.display = "none";
+              document.getElementById("thankyou").style.display = "block";
+            }
+          });
         }
-
-      }
   });
 }
 
