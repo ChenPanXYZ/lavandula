@@ -18,6 +18,7 @@ let recaptchaResponse
       };
     </script> -->
             <div id = "guestbook-form-body">
+                <p>The Comment System is recently renovated. So, if you don't see a message telling you that your message has been received by the database, please let me know!</p>
                 <div class="form-group">
                     <label for="form-name"><?php echo __("Name"); ?><span class="asterisk">*</span></label>
                     <input type="text" name="name" class="form-control" id= "form-name" placeholder="<?php echo __("Your Name"); ?>" required="required">
