@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PublicPageController@showHomepage');
 
-Route::get('/guestbook', 'PublicPageController@showGuestbook');
+// Route::get('/guestbook', 'PublicPageController@showGuestbook');
 
 Route::get('/resume', 'PublicPageController@showResume');
 

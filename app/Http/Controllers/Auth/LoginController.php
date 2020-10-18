@@ -45,7 +45,7 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        $this->validateLogin($request);
+        //$this->validateLogin($request);
 
         // If the class is using the ThrottlesLogins trait, we can automatically throttle
         // the login attempts for this application. We'll key this by the username and
@@ -85,23 +85,4 @@ class LoginController extends Controller
 
         return $this->loggedOut($request) ?: redirect('/');
     }
-
-
-
-    // public function authenticate(Request $request)
-    // {
-    //     $credentials = $request->only('email', 'password');
-
-    //     if (Auth::attempt($credentials)) {
-    //         // Authentication passed...
-    //         $user = Auth::user();
-    //         $user->api_token = Str::random(60);
-    //         $user->save();
-    //         return redirect()->intended('dashboard');
-    //     }
-    //     else {
-    //         return redirect()->back()->with('password', ['your message,here']);   
-    //         //return redirect()->back()->withErrors(['password', 'The Message']);;
-    //     }
-    // }
 }

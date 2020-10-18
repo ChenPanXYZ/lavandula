@@ -19,8 +19,5 @@
         <link rel="alternate" href="{{$languageUrls[1]}}" hreflang="zh" />
         <meta name="msapplication-TileColor" content="#268785">
         <meta name="theme-color" content="#268785">
-        @if($languageCode == "en")
-            <link href="/fonts/pan-sans/stylesheet.css" rel="stylesheet">
-        @endif
     </head>
     @yield('loading', View::make('shared-components/loading'))

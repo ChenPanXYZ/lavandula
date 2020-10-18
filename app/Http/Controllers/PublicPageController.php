@@ -20,18 +20,7 @@ class PublicPageController extends Controller
         $dislikeNumber = Counter::getData('dislike');
         $feedback = $language->init($visitorNumber);
 
-        $opts = array(
-            'http'=>array(
-              'method'=>"GET"
-            )
-          );
-          
-          $context = stream_context_create($opts);
-          
-          // Open the file using the HTTP headers set above
-          $comments = json_decode(file_get_contents('https://www.chen.life/wp-json/wp/v2/comments/?post=231&parent=0', false, $context));
-
-        //$comments = Comment::getProvedByTime();
+        $comments = Comment::getProvedByTime();
         if(!($feedback === 0)) {
             return redirect($feedback);
         }
@@ -40,24 +29,24 @@ class PublicPageController extends Controller
         }
     }
 
-    public function showGuestbook()
-    {
-        $language = new Language();
-        $visitorNumber = Counter::getData('visitor');
-        $likeNumber = Counter::getData('like');
-        $dislikeNumber = Counter::getData('dislike');
-        $feedback = $language->init($visitorNumber);
+    // public function showGuestbook()
+    // {
+    //     $language = new Language();
+    //     $visitorNumber = Counter::getData('visitor');
+    //     $likeNumber = Counter::getData('like');
+    //     $dislikeNumber = Counter::getData('dislike');
+    //     $feedback = $language->init($visitorNumber);
 
-        $feedback = $language->init($visitorNumber);
+    //     $feedback = $language->init($visitorNumber);
 
-        $comments = Comment::getProvedByTime();
-        if(!($feedback === 0)) {
-            return redirect($feedback);
-        }
-        else {
-            return view('guestbook-components/guestbook', ["languageCode" => $language->getLanguageCode(), "domain"=>$language->getDomain(), "languageUrls" => $language->getLanguageUrls(), "likeNumber" => $likeNumber, "dislikeNumber" => $dislikeNumber, "visitorNumber" => $visitorNumber, "comments" =>$comments, "commentsNumber" => -1]);
-        }
-    }
+    //     $comments = Comment::getProvedByTime();
+    //     if(!($feedback === 0)) {
+    //         return redirect($feedback);
+    //     }
+    //     else {
+    //         return view('guestbook-components/guestbook', ["languageCode" => $language->getLanguageCode(), "domain"=>$language->getDomain(), "languageUrls" => $language->getLanguageUrls(), "likeNumber" => $likeNumber, "dislikeNumber" => $dislikeNumber, "visitorNumber" => $visitorNumber, "comments" =>$comments, "commentsNumber" => -1]);
+    //     }
+    // }
 
 
     public function showHistory()

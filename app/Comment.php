@@ -79,9 +79,20 @@ class Comment extends Model
 
 
     public static function getProvedByTime() {
-        $comments = Comment::where('comment_approved', 't')
-        ->orderBy('comment_id', 'desc')
-        ->get();
+        // $comments = Comment::where('comment_approved', 't')
+        // ->orderBy('comment_id', 'desc')
+        // ->get();
+
+
+        $opts = array(
+            'http'=>array(
+              'method'=>"GET"
+            )
+          );
+          
+        $context = stream_context_create($opts);
+        
+        $comments = json_decode(file_get_contents('https://www.chen.life/wp-json/wp/v2/comments/?post=231&parent=0', false, $context));
         return $comments;
     }
 

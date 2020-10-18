@@ -13,5 +13,5 @@
     @yield('guestbook', View::make('shared-components/guestbook', ["likeNumber" => $likeNumber, "dislikeNumber" => $dislikeNumber, "comments" => $comments, "commentsNumber" => $commentsNumber]))
 @endsection
 @section('footer')
-    @yield('footer', View::make('shared-components/footer', ["visitorNumber" => $visitorNumber]))
+    @yield('footer', View::make('shared-components/footer', ["visitorNumber" => $visitorNumber, "languageCode" => $languageCode]))
 @endsection

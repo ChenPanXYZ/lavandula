@@ -1,5 +1,9 @@
 <section class = "main-section content" id = "skills">
         <h2><?php echo __("My Skills"); ?></h2>
+        <div id = "skill-buttons">
+            <div class = "icon-arrow-left" id="skills-previous-page-button"></div>
+            <div class = "icon-arrow-right" id="skills-next-page-button"></div>
+        </div>
         <div class = "skill-type" id = "programming-languages">
             <h4 style = "text-align: center;"><?php echo __("Programming Languages"); ?></h4>
         </div>
@@ -23,11 +27,8 @@
         <div class = "skill-type" id = "languages">
             <h4 style = "text-align: center;"><?php echo __("Languages"); ?></h4>
         </div>
-
-        <div id = "skill-buttons">
-            <div class = "icon-arrow-left" id="skills-previous-page-button"></div>
-            <div class = "icon-arrow-down" id="skills-more-page-button"><?php echo __("MORE"); ?></div>
-            <div class = "icon-arrow-right" id="skills-next-page-button"></div>
+        <div style = "text-align: center">
+        <div class = "icon-arrow-down" id="skills-more-page-button"><?php echo __("MORE"); ?></div>
         </div>
 </section>
 
@@ -56,7 +57,7 @@
 .skill-type {
     display: none;
 }
-.skill-type:nth-child(2) {
+.skill-type:nth-child(3) {
     display: block;
 }
 .skill {
@@ -268,7 +269,7 @@ function skillElementMaker(skill) {
     skillValueElement.textContent = skill.value + "%";
     skillNameElement.textContent = skill.name;
     skillValueElement.style.width = skill.value + "%";
-    skillValueElement.style.background = skill.color;
+    skillValueElement.style.background = "var(--header-text-color)";
 
     skillValueWrapperElement.appendChild(skillValueElement)
     skillElement.appendChild(skillNameElement);

@@ -216,6 +216,7 @@ ul {
   width: 100%;
   height: 100vh;
   color: var(--header-text-color);
+  border-radius: 0px 0px 8px 8px;
 }
 #header a {
     color: var(--header-text-color);
@@ -505,6 +506,7 @@ ul {
 }
 #like-dislike {
   font-size: 20px;
+  margin-top: 15px;
 }
 
 

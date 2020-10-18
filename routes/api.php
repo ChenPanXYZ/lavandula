@@ -32,9 +32,9 @@ use Illuminate\Support\Facades\Route;
 //Auth::routes(['register' => false, 'logout' => false]);
 
 // Comment API
-Route::post('comment', 'CommentController@add');
-Route::middleware('auth:api')->delete('comment', 'CommentController@delete');
-Route::middleware('auth:api')->put('comment', 'CommentController@modify');
+// Route::post('comment', 'CommentController@add');
+// Route::middleware('auth:api')->delete('comment', 'CommentController@delete');
+// Route::middleware('auth:api')->put('comment', 'CommentController@modify');
 
 // Resume API
 Route::middleware('auth:api')->post('resume', 'ResumeController@add');

@@ -37,12 +37,9 @@ let recaptchaResponse
                 <div class="form-group">
                     <p id = "send-comment-error"><?php echo __(">:O Please fill all the required fields and try again."); ?></p>
                     <p id = "send-comment-error-email"><?php echo __(">:/ Please provide a valid email address."); ?></p>
-
-                    <div id="recaptcha"></div>
                     <input onclick = "sendComment()" type="submit" name="submit" class="btn btn-primary" id = "form-submit" value="<?php echo __("Submit"); ?>">
                 </div>
             </div>
-            <p id = "comment-form-reminder"><?php echo __("* You need to pass the anti-bot verification to give a message. If you don't see reCAPTCHA, please refresh your cache or try the incognito mode. Thank you."); ?></p>
 
             @yield('like-dislike', View::make('shared-components/like-dislike', ["likeNumber" => $likeNumber, "dislikeNumber" => $dislikeNumber]))
             @yield('thankyou', View::make('shared-components/thankyou'))
