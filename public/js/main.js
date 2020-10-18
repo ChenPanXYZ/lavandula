@@ -208,18 +208,19 @@ function sendComment() {
     return;
   }
 
-  const comment = { name: name, email: email, content: content, recaptchaResponse: recaptchaResponse };
-  fetch("api/comment", {
-    method: "POST",
-    body: JSON.stringify(comment),
-    headers: {
-      'content-type': 'application/json'
-    },
-  }).then(res => {
-    if (res == -1) {
-      alert("You Are a Bot, Go Away!")
-    }
-    else {
+  // const comment = { name: name, email: email, content: content, recaptchaResponse: recaptchaResponse };
+  // const comment = { name: name, email: email, content: content};
+  // fetch("api/comment", {
+  //   method: "POST",
+  //   body: JSON.stringify(comment),
+  //   headers: {
+  //     'content-type': 'application/json'
+  //   },
+  // }).then(res => {
+  //   if (res == -1) {
+  //     alert("You Are a Bot, Go Away!")
+  //   }
+  //   else {
       let wpComment = { post: 231, author_name: name, author_email: email, content: content }
       fetch("https://www.chen.life/wp-json/wp/v2/comments", {
         method: "POST",
@@ -231,12 +232,15 @@ function sendComment() {
         if (res) {
           document.getElementById("guestbook-form-body").style.display = "none";
           document.getElementById("comment-author-name").textContent = name;
-          document.getElementById("comment-form-reminder").style.display = "none";
+          //document.getElementById("comment-form-reminder").style.display = "none";
           document.getElementById("thankyou").style.display = "block";
         }
+        else {
+          alert("Something is wrong. Please try again. Thank you!")
+        }
       });
-    }
-  });
+  //   }
+  // });
 }
 
 
