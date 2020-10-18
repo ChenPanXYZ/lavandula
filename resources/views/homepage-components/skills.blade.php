@@ -89,7 +89,7 @@
     color: #fffffb;
     line-height: 20px;
 }
-@media (min-width: 785px) {
+@media (min-width: 900px) {
     .skill-value {
         padding-right: 15px;
         line-height: 37px;
