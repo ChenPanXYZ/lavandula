@@ -201,7 +201,7 @@ dd {
 	font-size: 9.5px;
 }
 
-@media (min-width: 785px) {
+@media (min-width: 900px) {
 	#like-dislike {
 		width: 30%;
 	}

@@ -859,7 +859,7 @@ for(let i = 0; i < locationsByDays.length; i++) {
 #hisotry-info ol{
     font-size: 18px;
 }
-@media (min-width: 785px) {
+@media (min-width: 900px) {
     #hisotry-info ol{
         font-size: 20px;
     }
