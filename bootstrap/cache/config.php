@@ -3,14 +3,14 @@
   array (
     'name' => 'Laravel',
     'env' => 'local',
-    'debug' => false,
+    'debug' => true,
     'url' => 'http://localhost',
     'asset_url' => NULL,
     'timezone' => 'America/Toronto',
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:fuoEHru2qU6jwuEexQezglDXdpGpBAB5xkngq0EXceg=',
+    'key' => 'base64:wiXUKvTuacd9dh8a1n9xdCFzvgqO3PiIoOyTirp1niU=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (

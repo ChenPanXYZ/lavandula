@@ -605,3 +605,18 @@ div#info {
   right: 0;
   margin: auto;
 }
+
+
+#skills-more-page-button {
+  background-color: var(--secondary-background-color);
+  padding: 10px;
+  color: var(--background-color);
+  border-radius: 3px;
+  cursor: grab;
+  margin-top: 37px;
+}
+
+
+#world-map-markers {
+  background-color: #dcb879;
+}

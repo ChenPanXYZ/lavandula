@@ -45,6 +45,7 @@
 #skills-previous-page-button, #skills-next-page-button, #skills-more-page-button {
     display: inline-block;
     margin-bottom: 15px;
+    cursor: grab;
 }
 #skills-next-page-button {
     float: right;
@@ -269,7 +270,7 @@ function skillElementMaker(skill) {
     skillValueElement.textContent = skill.value + "%";
     skillNameElement.textContent = skill.name;
     skillValueElement.style.width = skill.value + "%";
-    skillValueElement.style.background = "var(--header-text-color)";
+    skillValueElement.style.background = "var(--secondary-background-color)";
 
     skillValueWrapperElement.appendChild(skillValueElement)
     skillElement.appendChild(skillNameElement);
