@@ -69,5 +69,5 @@
 @endsection('sections')
 
 @section('footer')
-    @yield('footer', View::make('shared-components/footer', ["visitorNumber" => $visitorNumber]))
+    @yield('footer', View::make('shared-components/footer', ["visitorNumber" => $visitorNumber, "languageCode" => $languageCode]))
 @endsection('footer')

@@ -28,7 +28,7 @@
             <h4 style = "text-align: center;"><?php echo __("Languages"); ?></h4>
         </div>
         <div style = "text-align: center">
-        <div class = "icon-arrow-down" id="skills-more-page-button"><?php echo __("MORE"); ?></div>
+        <button class = "icon-arrow-down" id="skills-more-page-button"><?php echo __("MORE"); ?></button>
         </div>
 </section>
 
@@ -45,7 +45,8 @@
 #skills-previous-page-button, #skills-next-page-button, #skills-more-page-button {
     display: inline-block;
     margin-bottom: 15px;
-    cursor: grab;
+    cursor: pointer !important;
+    border: none;
 }
 #skills-next-page-button {
     float: right;

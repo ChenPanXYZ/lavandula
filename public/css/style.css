@@ -498,9 +498,10 @@ ul {
   float: right;
 }
 
-/* #form-submit {
-  opacity: 0.5;
-} */
+#form-submit {
+  /* opacity: 0.5; */
+  cursor: pointer;
+}
 #visitorNumber {
   font-size: 9.5px;
 }
@@ -612,7 +613,6 @@ div#info {
   padding: 10px;
   color: var(--background-color);
   border-radius: 3px;
-  cursor: grab;
   margin-top: 37px;
 }
 

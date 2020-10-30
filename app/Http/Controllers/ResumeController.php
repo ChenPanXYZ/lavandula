@@ -54,4 +54,7 @@ class ResumeController extends Controller
             Resume_Section_Item_Detail::modify($request);
         } 
     }
+    public function getAll(Request $request) {
+        return "hi";
+    }
 }

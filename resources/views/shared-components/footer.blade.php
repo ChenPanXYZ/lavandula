@@ -23,11 +23,11 @@
 <script type="text/javascript" src="/js/modal.js" async></script>
 <link rel="stylesheet" href="/icomoon/style.css" defer>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-101895586-2"></script>
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101895586-2"></script>
 <script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
 
 	gtag('config', 'UA-101895586-2');
-</script>
+</script> -->

@@ -40,6 +40,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->post('resume', 'ResumeController@add');
 Route::middleware('auth:api')->delete('resume', 'ResumeController@delete');
 Route::middleware('auth:api')->put('resume', 'ResumeController@update');
+Route::middleware('api')->get('resume', 'ResumeController@getAll');
 
 //counter
 Route::put('like-dislike', 'CounterController@modify');

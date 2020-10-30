@@ -86,7 +86,7 @@ class Language extends Model
         else 
         { 
             if (isset($_COOKIE['language']) === false) { //First Use, also update the web counter.
-                $browser_lang=strtok($_SERVER['HTTP_ACCEPT_LANGUAGE'], ',');
+		$browser_lang = !empty($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? strtok(strip_tags($_SERVER['HTTP_ACCEPT_LANGUAGE']), ',') : '';
                 if ($browser_lang == "zh-TW") {
                     $language = "zh-TW";
                 }
