@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Resume_Section;
-use App\Resume_Section_Item;
-use App\Resume_Section_Item_Detail;
+use App\ResumeSection;
+use App\ResumeSectionItem;
+use App\ResumeSectionItemDetail;
 
 
 class ResumeController extends Controller
@@ -14,13 +14,13 @@ class ResumeController extends Controller
     public function add(Request $request) {
         switch ($request->type) {
             case 0:
-                Resume_Section::add($request);
+                ResumeSection::add($request);
                 break;
             case 1:
                 Resume_Section_Item::add($request);
                 break;
             case 2:
-                Resume_Section_Item_Detail::add($request);
+                ResumeSectionItemDetail::add($request);
                 break;
         }
     }
@@ -28,13 +28,13 @@ class ResumeController extends Controller
     public function delete(Request $request) {
         switch ($request->type) {
             case 0:
-                Resume_Section::remove($request);
+                ResumeSection::remove($request);
                 break;
             case 1:
-                Resume_Section_Item::remove($request);
+                ResumeSectionItem::remove($request);
                 break;
             case 2:
-                Resume_Section_Item_Detail::remove($request);
+                ResumeSectionItemDetail::remove($request);
                 break;
         }
     }
@@ -43,18 +43,18 @@ class ResumeController extends Controller
     public function update(Request $request) {
         if($request->has('resumeSectionCheckbox')) 
         {
-            Resume_Section::modify($request);
+            ResumeSection::modify($request);
         } 
         if($request->has('resumeSectionItemCheckbox')) {
-            Resume_Section_Item::modify($request);
+            ResumeSectionItem::modify($request);
         } 
         
         
         if($request->has('resumeSectionItemContentCheckbox')) {
-            Resume_Section_Item_Detail::modify($request);
+            ResumeSectionItemDetail::modify($request);
         } 
     }
     public function getAll(Request $request) {
-        return "hi";
+        return ResumeSection::getAll();
     }
 }

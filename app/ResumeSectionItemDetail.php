@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Http\Request;
 
-class Resume_Section_Item_Detail extends Model
+class ResumeSectionItemDetail extends Model
 {
     //
     protected $table = 'resume_sections_items_details';
@@ -22,9 +22,9 @@ class Resume_Section_Item_Detail extends Model
         $itemId = $request->itemId;
         $content = $request->content;
 
-        $resume_section_item_detail = new Resume_Section_Item_Detail();
+        $resume_section_item_detail = new ResumeSectionItemDetail();
         $resume_section_item_detail->resume_section_item_detail_content = $content;
-        $resume_section_item_detail->resume_section_item_detail_display_order = Resume_Section_Item_Detail::where('resume_section_item_id', $itemId)->max('resume_section_item_detail_display_order') + 1;
+        $resume_section_item_detail->resume_section_item_detail_display_order = ResumeSectionItemDetail::where('resume_section_item_id', $itemId)->max('resume_section_item_detail_display_order') + 1;
         $resume_section_item_detail->resume_section_item_id = $itemId;
         $resume_section_item_detail->save();
 
@@ -45,8 +45,8 @@ class Resume_Section_Item_Detail extends Model
     public static function remove($request) {
         $id = $request->id;
         $order = $request->order;
-        Resume_Section_Item_Detail::where('resume_section_item_detail_id', $id)->delete();
-        Resume_Section_Item_Detail::where('resume_section_item_detail_display_order', '>', $order)->decrement('resume_section_item_detail_display_order', 1);
+        ResumeSectionItemDetail::where('resume_section_item_detail_id', $id)->delete();
+        ResumeSectionItemDetail::where('resume_section_item_detail_display_order', '>', $order)->decrement('resume_section_item_detail_display_order', 1);
     }
 
     public static function modify($request) {
@@ -63,7 +63,7 @@ class Resume_Section_Item_Detail extends Model
     
         foreach ($resume_sections_items_content as $resume_section_item_content_id => $resume_section_item_content) 
         {
-            Resume_Section_Item_Detail::where('resume_section_item_detail_id', $resume_section_item_content_id)
+            ResumeSectionItemDetail::where('resume_section_item_detail_id', $resume_section_item_content_id)
             ->update(['resume_section_item_detail_content' => $resume_section_item_content['content'], 'resume_section_item_detail_display_order' => $resume_section_item_content['display_order']]);
         }
     }

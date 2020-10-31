@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 use DB;
 
-class Resume_Section extends Model
+class ResumeSection extends Model
 {
     protected $table = 'resume_sections';
     protected $primaryKey = 'resume_section_id';
@@ -22,9 +22,9 @@ class Resume_Section extends Model
     
     public static function add($request) {
         $title = $request->title;
-        $resume_section = new Resume_Section();
+        $resume_section = new ResumeSection();
         $resume_section->resume_section_title = $title;
-        $resume_section->resume_section_display_order = Resume_Section::max('resume_section_display_order') + 1;
+        $resume_section->resume_section_display_order = ResumeSection::max('resume_section_display_order') + 1;
         $resume_section->save();
 
         $section_id = $resume_section->resume_section_id;
@@ -44,8 +44,8 @@ class Resume_Section extends Model
     public static function remove($request) {
         $id = $request->id;
         $order = $request->order;
-        Resume_Section::where('resume_section_id', $id)->delete();
-        Resume_Section::where('resume_section_display_order', '>', $order)->decrement('resume_section_display_order', 1);
+        ResumeSection::where('resume_section_id', $id)->delete();
+        ResumeSection::where('resume_section_display_order', '>', $order)->decrement('resume_section_display_order', 1);
     }
 
     public static function modify($request) {
@@ -62,7 +62,7 @@ class Resume_Section extends Model
         }
         foreach ($resume_sections as $resume_section_id => $resume_section) 
         {
-            Resume_Section::where('resume_section_id', $resume_section_id)
+            ResumeSection::where('resume_section_id', $resume_section_id)
             ->update(['resume_section_title' => $resume_section['title'], 'resume_section_display_order' => $resume_section['display_order']]);
         }
     }

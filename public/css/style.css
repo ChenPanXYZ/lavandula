@@ -190,7 +190,7 @@ ul {
 }
 
 .topnav {
-  overflow: hidden;
+  overflow: auto;
 }
 
 .topnav a {
@@ -619,4 +619,11 @@ div#info {
 
 #world-map-markers {
   background-color: #dcb879;
+}
+
+
+@media (max-height: 250px) {
+  #contact {
+    display: none;
+  }
 }

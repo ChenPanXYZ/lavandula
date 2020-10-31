@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Http\Request;
 
-class Resume_Section_Item extends Model
+class ResumeSectionItem extends Model
 {
     //
     protected $table = 'resume_sections_items';
@@ -19,9 +19,9 @@ class Resume_Section_Item extends Model
 
     public static function add($request) {
         $title = $request->title;
-        $resume_section_item = new Resume_Section_Item();
+        $resume_section_item = new ResumeSectionItem();
         $resume_section_item->resume_section_item_title = $request->title;
-        $resume_section_item->resume_section_item_display_order = Resume_Section_Item::where('resume_section_id', $request->sectionId)->max('resume_section_item_display_order') + 1;
+        $resume_section_item->resume_section_item_display_order = ResumeSectionItem::where('resume_section_id', $request->sectionId)->max('resume_section_item_display_order') + 1;
         $resume_section_item->resume_section_id = $request->sectionId;
         $resume_section_item->save();
 
@@ -42,9 +42,9 @@ class Resume_Section_Item extends Model
     public static function remove($request) {
         $id = $request->id;
         $order = $request->order;
-        Resume_Section_Item::where('resume_section_item_id', $id)->delete();
+        ResumeSectionItem::where('resume_section_item_id', $id)->delete();
 
-        Resume_Section_Item::where('resume_section_item_display_order', '>', $order)->decrement('resume_section_item_display_order', 1);
+        ResumeSectionItem::where('resume_section_item_display_order', '>', $order)->decrement('resume_section_item_display_order', 1);
     }
 
     public static function modify($request) {
@@ -62,7 +62,7 @@ class Resume_Section_Item extends Model
     
         foreach ($resume_sections_items as $resume_section_item_id => $resume_section_item) 
         {
-            Resume_Section_Item::where('resume_section_item_id', $resume_section_item_id)
+            ResumeSectionItem::where('resume_section_item_id', $resume_section_item_id)
             ->update(['resume_section_item_title' => $resume_section_item['title'], 'resume_section_item_display_order' => $resume_section_item['display_order']]);
         }
     }

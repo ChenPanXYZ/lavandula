@@ -207,20 +207,7 @@ function sendComment() {
   if (notGood == 1) {
     return;
   }
-
-  // const comment = { name: name, email: email, content: content, recaptchaResponse: recaptchaResponse };
-  // const comment = { name: name, email: email, content: content};
-  // fetch("api/comment", {
-  //   method: "POST",
-  //   body: JSON.stringify(comment),
-  //   headers: {
-  //     'content-type': 'application/json'
-  //   },
-  // }).then(res => {
-  //   if (res == -1) {
-  //     alert("You Are a Bot, Go Away!")
-  //   }
-  //   else {
+  
       let wpComment = { post: 231, author_name: name, author_email: email, content: content }
       fetch("https://www.chen.life/wp-json/wp/v2/comments", {
         method: "POST",
@@ -254,10 +241,11 @@ class Header {
     this.contact = document.getElementById("contact");
   }
 
+
   init() {
     this.name.style.display = "block";
-    this.contact.style.display = "block";
     this.modal.style.display = "none";
+    this.topnav.style.maxHeight = this.self.clientHeight + "px";
   }
 
   adjust() {

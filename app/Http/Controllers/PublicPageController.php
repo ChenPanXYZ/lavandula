@@ -25,7 +25,7 @@ class PublicPageController extends Controller
             return redirect($feedback);
         }
         else {
-            return view('homepage-components/homepage', ["languageCode" => $language->getLanguageCode(), "domain"=>$language->getDomain(), "languageUrls" => $language->getLanguageUrls(), "resume" => \App\Resume_Section::getAll(), "likeNumber" => $likeNumber, "dislikeNumber" => $dislikeNumber, "visitorNumber" => $visitorNumber, "comments" =>$comments, "commentsNumber" => 6]);
+            return view('homepage-components/homepage', ["languageCode" => $language->getLanguageCode(), "domain"=>$language->getDomain(), "languageUrls" => $language->getLanguageUrls(), "resume" => \App\ResumeSection::getAll(), "likeNumber" => $likeNumber, "dislikeNumber" => $dislikeNumber, "visitorNumber" => $visitorNumber, "comments" =>$comments, "commentsNumber" => 6]);
         }
     }
 
@@ -79,7 +79,7 @@ class PublicPageController extends Controller
             return redirect($feedback);
         }
         else {
-            return view('resume-components/resume', ["languageCode" => $language->getLanguageCode(), "domain"=>$language->getDomain(), "languageUrls" => $language->getLanguageUrls(), "resume" => \App\Resume_Section::getAll(), "likeNumber" => $likeNumber, "dislikeNumber" => $dislikeNumber, "visitorNumber" => $visitorNumber]);
+            return view('resume-components/resume', ["languageCode" => $language->getLanguageCode(), "domain"=>$language->getDomain(), "languageUrls" => $language->getLanguageUrls(), "resume" => \App\ResumeSection::getAll(), "likeNumber" => $likeNumber, "dislikeNumber" => $dislikeNumber, "visitorNumber" => $visitorNumber]);
         }
     }
 
