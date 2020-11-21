@@ -18,6 +18,7 @@ let recaptchaResponse
       };
     </script> -->
             <div id = "guestbook-form-body">
+                <p>Due to a technical issue, the comments submitted after September 1 were NOT received. If you left a comment then, please re-submit. Aplogize and thank you!</p>
                 <p>The Comment System is recently renovated. So, if you don't see a message telling you that your message has been received by the database, please let me know!</p>
                 <div class="form-group">
                     <label for="form-name"><?php echo __("Name"); ?><span class="asterisk">*</span></label>
