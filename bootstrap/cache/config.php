@@ -1,16 +1,16 @@
 <?php return array (
   'app' => 
   array (
-    'name' => 'Laravel',
-    'env' => 'local',
-    'debug' => false,
+    'name' => 'chenpan',
+    'env' => 'production',
+    'debug' => true,
     'url' => 'http://localhost',
     'asset_url' => NULL,
     'timezone' => 'America/Toronto',
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:M2Ut7EXlC8LYhT4TMFvqzJsBkV2jOFHiPwIk4ZV6/Ok=',
+    'key' => 'base64:JAuddJeTDbElzfzwUSX2y1eEHvFGx5m8Gpx4XsDykoE=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -216,7 +216,7 @@
         'endpoint' => NULL,
       ),
     ),
-    'prefix' => 'laravel_cache',
+    'prefix' => 'chenpan_cache',
   ),
   'cors' => 
   array (
@@ -314,7 +314,7 @@
       'options' => 
       array (
         'cluster' => 'redis',
-        'prefix' => 'laravel_database_',
+        'prefix' => 'chenpan_database_',
       ),
       'default' => 
       array (
@@ -506,11 +506,11 @@
       'smtp' => 
       array (
         'transport' => 'smtp',
-        'host' => 'smtp.sina.com',
-        'port' => '465',
-        'encryption' => 'ssl',
-        'username' => 'cpboke@sina.com',
-        'password' => 'aA19980906',
+        'host' => 'smtp.mailtrap.io',
+        'port' => '2525',
+        'encryption' => NULL,
+        'username' => NULL,
+        'password' => NULL,
         'timeout' => NULL,
       ),
       'ses' => 
@@ -543,7 +543,7 @@
     'from' => 
     array (
       'address' => NULL,
-      'name' => 'Laravel',
+      'name' => 'chenpan',
     ),
     'markdown' => 
     array (
@@ -638,7 +638,7 @@
       0 => 2,
       1 => 100,
     ),
-    'cookie' => 'laravel_session',
+    'cookie' => 'chenpan_session',
     'path' => '/',
     'domain' => NULL,
     'secure' => NULL,

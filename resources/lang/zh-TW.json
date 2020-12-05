@@ -69,7 +69,7 @@
         "%s said on %s": "%s在%s說了",
         "M d, Y": "Y年m月d日",
 
-    "Web Hosting by Hetzner": "Hetzner提供雲端運算服務",
+    "Web Hosting by DigitalOcean": "DigitalOcean提供雲端運算服務",
     "CDN by Cloudflare": "Cloudflare提供內容傳遞網路",
 
 

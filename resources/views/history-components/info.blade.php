@@ -242,14 +242,24 @@ let hostings = [
         }
     }.init(),
     {
-        "provider": "Hetzner",
-        "location": "德国巴伐利亚州",
-        "startDate": "2020-05-06",
-        init: function () {
-            this.duration = Math.floor(getDayGap(new Date(this.startDate), new Date()))
-            return this
-        }
-    }.init()
+            "provider": "Hetzner",
+            "location": "德国巴伐利亚州",
+            "startDate": "2020-05-06",
+            "endDate": "2020-11-22",
+            init: function () {
+                this.duration = getDayGap(new Date(this.startDate), new Date(this.endDate))
+                return this
+            }
+        }.init(),
+        {
+            "provider": "DigitalOcean",
+            "location": "美国加利福利亚州",
+            "startDate": "2020-11-22",
+            init: function () {
+                this.duration = Math.floor(getDayGap(new Date(this.startDate), new Date()))
+                return this
+            }
+        }.init()
 ]
 <?php }
 else if ($languageCode == "zh-TW") {?>
@@ -448,6 +458,16 @@ else if ($languageCode == "zh-TW") {?>
             "provider": "Hetzner",
             "location": "德國巴伐利亞州",
             "startDate": "2020-05-06",
+            "endDate": "2020-11-22",
+            init: function () {
+                this.duration = getDayGap(new Date(this.startDate), new Date(this.endDate))
+                return this
+            }
+        }.init(),
+        {
+            "provider": "DigitalOcean",
+            "location": "美國加利福利亞州",
+            "startDate": "2020-11-22",
             init: function () {
                 this.duration = Math.floor(getDayGap(new Date(this.startDate), new Date()))
                 return this
@@ -651,6 +671,16 @@ else if ($languageCode == "zh-TW") {?>
             "provider": "Hetzner",
             "location": "Bavaria, Germany",
             "startDate": "2020-05-06",
+            "endDate": "2020-11-22",
+            init: function () {
+                this.duration = getDayGap(new Date(this.startDate), new Date(this.endDate))
+                return this
+            }
+        }.init(),
+        {
+            "provider": "DigitalOcean",
+            "location": "California, US",
+            "startDate": "2020-11-22",
             init: function () {
                 this.duration = Math.floor(getDayGap(new Date(this.startDate), new Date()))
                 return this
